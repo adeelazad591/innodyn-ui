@@ -130,7 +130,7 @@ function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center gap-5 mt-1">
           <button
             type="button"
-            className="cursor-pointer flex flex-1 items-center justify-center gap-2.5 py-3.5 rounded-full text-lg font-medium text-white bg-radial from-[#5a5a5a]/75 via-[#282828]/90 to-[#0c0c0e] hover:bg-black hover:bg-none border border-white/10 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)] transition-all duration-300"
+            className="group cursor-pointer flex flex-1 items-center justify-center gap-2.5 py-3.5 rounded-full text-lg font-medium text-white bg-radial from-[#5a5a5a]/75 via-[#282828]/90 to-[#0c0c0e] hover:bg-black hover:bg-none border border-white/10 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)] transition-all duration-300"
           >
             <svg
               width="14"
@@ -138,6 +138,7 @@ function ProductCard({ product }: { product: Product }) {
               viewBox="0 0 14 14"
               fill="none"
               aria-hidden
+              className="transition-transform duration-300 group-hover:rotate-90"
             >
               <path
                 d="M7 1v12M1 7h12"
@@ -159,7 +160,7 @@ function ProductCard({ product }: { product: Product }) {
 
 export default function KeyProducts() {
   return (
-    <section className="py-20 bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 lg:px-0">
         {/* Section header */}
         <div className="flex items-start justify-between gap-12 mb-12">

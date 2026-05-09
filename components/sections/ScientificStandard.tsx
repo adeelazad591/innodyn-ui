@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function ScientificStandard() {
   return (
-    <section className="py-20 lg:py-28 bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]">
+    <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 lg:px-0">
         {/* Section header — heading + intro, mirrors KeyProducts layout */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12 mb-12 lg:mb-16">

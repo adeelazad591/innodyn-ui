@@ -16,13 +16,7 @@ function FlaskIcon() {
 
 export default function WhatMakesDifferent() {
   return (
-    <section
-      className="relative py-20 lg:py-28 overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(ellipse 100% 90% at 50% 50%, #151518 0%, #080808 100%)",
-      }}
-    >
+    <section className="relative py-20 lg:py-28 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-0">
         {/* Centered heading */}
         <div className="text-center mb-12 lg:mb-16">

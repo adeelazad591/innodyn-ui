@@ -1,4 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import KeyProducts from "@/components/sections/KeyProducts";
 import ScientificStandard from "@/components/sections/ScientificStandard";
@@ -10,10 +11,13 @@ export default function Home() {
     <main className="flex flex-col min-h-screen">
       <Navbar />
       <Hero />
-      <KeyProducts />
-      <ScientificStandard />
-      <WhatMakesDifferent />
-      <OurPhilosophy />
+      <div className="section-bg">
+        <KeyProducts />
+        <ScientificStandard />
+        <WhatMakesDifferent />
+        <OurPhilosophy />
+      </div>
+      <Footer />
     </main>
   );
 }

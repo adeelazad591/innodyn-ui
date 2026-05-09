@@ -9,6 +9,24 @@
   font-family: var(--font-poppins);
 }
 
+@utility footer-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 80% at 100% 0%, black 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 100% 0%, black 20%, transparent 75%);
+}
+
+@utility section-bg {
+  background: linear-gradient(
+    180deg,
+    rgba(52, 52, 52, 0.72) 0%,
+    rgba(24, 24, 24, 0.96) 42%,
+    #111111 100%
+  );
+}
+
 body {
   background-color: #0a0a0a;
   color: #ededed;

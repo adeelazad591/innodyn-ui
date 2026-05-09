@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function OurPhilosophy() {
   return (
-    <section className="py-20 lg:py-28 bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]">
+    <section className="py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left — text content */}
