@@ -13,7 +13,15 @@ export default function Button({ label, href = "#", onClick }: ButtonProps) {
     >
       {label}
       <span className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-600/80 text-base leading-none shrink-0">
-        →
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+          <path
+            d="M2.5 7h9M8.5 3.5 12 7l-3.5 3.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </span>
     </a>
   );
