@@ -6,6 +6,7 @@ import ScientificStandard from "@/components/sections/ScientificStandard";
 import WhatMakesDifferent from "@/components/sections/WhatMakesDifferent";
 import OurPhilosophy from "@/components/sections/OurPhilosophy";
 import ProductExperience from "@/components/sections/ProductExperience";
+import HigherStandards from "@/components/sections/HigherStandards";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <WhatMakesDifferent />
         <OurPhilosophy />
         <ProductExperience />
+        <HigherStandards />
       </div>
       <Footer />
     </main>
