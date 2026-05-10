@@ -11,7 +11,7 @@ export default function ScientificStandard() {
             <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
               A More Scientific
             </h2>
-            <h2 className="font-serif font-extrabold italic text-zinc-500 text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
+            <h2 className="font-serif font-extrabold italic text-silver-gradient text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
               Standard.
             </h2>
           </div>

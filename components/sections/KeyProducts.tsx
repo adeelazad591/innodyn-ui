@@ -84,13 +84,13 @@ function ProductCard({ product }: { product: Product }) {
           </span>
         </div>
 
-        <div className="flex items-center justify-center h-[230px]">
+        <div className="flex items-center justify-center h-57.5">
           <Image
             src={product.image}
             alt={product.name}
             width={170}
             height={230}
-            className="h-[230px] w-auto drop-shadow-2xl"
+            className="h-57.5 w-auto drop-shadow-2xl"
           />
         </div>
       </div>
@@ -107,7 +107,7 @@ function ProductCard({ product }: { product: Product }) {
           {product.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3.5 py-[5px] rounded-full text-[14px] leading-5 font-medium font-poppins text-#A3A3A3 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10"
+              className="px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-#A3A3A3 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10"
             >
               {tag}
             </span>
@@ -119,7 +119,7 @@ function ProductCard({ product }: { product: Product }) {
           {product.details.map((detail, i) => (
             <span
               key={i}
-              className="px-3.5 py-[5px] rounded-full text-[14px] leading-5 font-medium font-poppins text-zinc-400 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10"
+              className="px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-zinc-400 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10"
             >
               {detail}
             </span>
@@ -168,10 +168,7 @@ export default function KeyProducts() {
             <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
               Our Key
             </h2>
-            <h2
-              className="font-extrabold italic text-zinc-500 block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
+            <h2 className="font-extrabold italic font-serif text-silver-gradient block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
               Products.
             </h2>
           </div>

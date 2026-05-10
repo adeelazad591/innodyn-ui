@@ -22,8 +22,8 @@ export default function WhatMakesDifferent() {
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold leading-tight tracking-tight mb-6">
             <span className="text-white">What Makes </span>
-            <span className="font-serif italic text-zinc-500">Innodyn </span>
-            <span className="font-serif italic text-zinc-500">Different.</span>
+            <span className="font-serif italic text-silver-gradient">Innodyn </span>
+            <span className="font-serif italic text-silver-gradient">Different.</span>
           </h2>
           <p className="text-base sm:text-xl font-normal text-zinc-400 leading-[1.8] max-w-5xl px-0 lg:px-6 mx-auto">
             At Innodyn, the foundation is not aesthetics alone. It is process.

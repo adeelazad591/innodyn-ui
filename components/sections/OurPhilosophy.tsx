@@ -11,7 +11,7 @@ export default function OurPhilosophy() {
             <div>
               <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
                 Our
-                <span className="font-serif ps-4 font-extrabold italic text-zinc-500 text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
+                <span className="font-serif ps-4 font-extrabold italic text-silver-gradient text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
                   Philosophy.
                 </span>
               </h2>

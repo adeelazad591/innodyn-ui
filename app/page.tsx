@@ -5,6 +5,7 @@ import KeyProducts from "@/components/sections/KeyProducts";
 import ScientificStandard from "@/components/sections/ScientificStandard";
 import WhatMakesDifferent from "@/components/sections/WhatMakesDifferent";
 import OurPhilosophy from "@/components/sections/OurPhilosophy";
+import ProductExperience from "@/components/sections/ProductExperience";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ScientificStandard />
         <WhatMakesDifferent />
         <OurPhilosophy />
+        <ProductExperience />
       </div>
       <Footer />
     </main>

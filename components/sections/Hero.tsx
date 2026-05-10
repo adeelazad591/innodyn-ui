@@ -3,33 +3,12 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section
-      className="relative flex flex-1 min-h-screen items-center overflow-hidden"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px)",
-        backgroundSize: "64px 64px",
-      }}
-    >
+    <section className="relative flex flex-1 min-h-screen items-center overflow-hidden hero-grid">
       {/* Radial glow behind object */}
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 70% at 72% 50%, rgba(160,120,255,0.07) 0%, rgba(80,60,180,0.04) 40%, transparent 70%)",
-        }}
-      />
+      <div aria-hidden className="absolute inset-0 pointer-events-none hero-glow" />
 
       {/* Soft edge vignette */}
-      <div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 100% 100% at 50% 50%, transparent 40%, rgba(0,0,0,0.6) 100%)",
-        }}
-      />
+      <div aria-hidden className="absolute inset-0 pointer-events-none hero-vignette" />
 
       {/* Text content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 min-[1400px]:px-0 pt-24 sm:pt-28 min-[1400px]:pt-20">
@@ -38,10 +17,7 @@ export default function Hero() {
             <span className="font-extrabold text-white block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
               Precision Compounds.
             </span>
-            <span
-              className="font-extrabold italic text-zinc-500 block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-6xl leading-tight"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
+            <span className="font-extrabold italic font-serif text-silver-gradient block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-6xl leading-tight">
               Advanced Standards.
             </span>
             <span className="font-extrabold text-white block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-6xl leading-tight">
