@@ -7,6 +7,7 @@ import WhatMakesDifferent from "@/components/sections/WhatMakesDifferent";
 import OurPhilosophy from "@/components/sections/OurPhilosophy";
 import ProductExperience from "@/components/sections/ProductExperience";
 import HigherStandards from "@/components/sections/HigherStandards";
+import NextGeneration from "@/components/sections/NextGeneration";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <OurPhilosophy />
         <ProductExperience />
         <HigherStandards />
+        <NextGeneration />
       </div>
       <Footer />
     </main>
