@@ -103,7 +103,7 @@ export default function ProductExperience() {
           <div className="relative z-10">
             {/* Badge */}
             <div className="flex justify-center mb-8">
-              <span className="inline-flex items-center px-5 py-2 rounded-2xl bg-[#1e1e20] border border-white/10 text-zinc-400 text-sm md:text-lg font-base tracking-wide ">
+              <span className="shadow-[0_14px_44px_rgba(0,0,0,0.45)] backdrop-blur-md inline-flex items-center px-5 py-2 rounded-2xl bg-[#1e1e20] border-2 border-white/20 text-zinc-400 text-sm md:text-lg font-base tracking-wide bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]">
                 Interface Architecture
               </span>
             </div>

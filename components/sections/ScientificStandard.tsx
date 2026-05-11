@@ -43,7 +43,7 @@ export default function ScientificStandard() {
             </div>
           </div>
 
-          <div className="relative flex items-center justify-end">
+          <div className="relative flex items-center justify-end animate-float">
             <Image
               src="/images/devices-image.png"
               alt="Innodyn portal dashboard on desktop and mobile"

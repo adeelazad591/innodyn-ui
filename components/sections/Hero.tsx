@@ -17,13 +17,22 @@ export default function Hero() {
       </video>
 
       {/* Dark overlay to tone down the video */}
-      <div aria-hidden className="absolute inset-0 bg-black/60 pointer-events-none" />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-black/60 pointer-events-none"
+      />
 
       {/* Radial glow behind object */}
-      <div aria-hidden className="absolute inset-0 pointer-events-none hero-glow" />
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none hero-glow"
+      />
 
       {/* Soft edge vignette */}
-      <div aria-hidden className="absolute inset-0 pointer-events-none hero-vignette" />
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none hero-vignette"
+      />
 
       {/* Text content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 min-[1400px]:px-0 pt-24 sm:pt-28 min-[1400px]:pt-20">
@@ -56,7 +65,7 @@ export default function Hero() {
       </div>
 
       {/* Hero image — wide desktop only */}
-      <div className="hidden min-[1400px]:flex absolute right-0 top-0 bottom-0 items-center z-10 pointer-events-none">
+      <div className="animate-float  hidden min-[1400px]:flex absolute right-0 top-0 bottom-0 items-center z-10 pointer-events-none">
         <Image
           src="/images/hero-object.png"
           alt="Abstract chrome 3D object"

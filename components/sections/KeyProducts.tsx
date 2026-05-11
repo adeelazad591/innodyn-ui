@@ -70,7 +70,7 @@ const PRODUCTS: Product[] = [
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="flex flex-col bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] border-2 border-zinc-700 rounded-[20px] overflow-hidden">
+    <div className="group flex flex-col bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] border-2 border-zinc-700 rounded-[20px] overflow-hidden">
       {/* Upper zone — image on card background */}
       <div className="px-6 pt-6 pb-6">
         <div className="flex items-center gap-2.5 mb-7">
@@ -90,7 +90,7 @@ function ProductCard({ product }: { product: Product }) {
             alt={product.name}
             width={170}
             height={230}
-            className="h-57.5 w-auto drop-shadow-2xl"
+            className="h-57.5 w-auto drop-shadow-2xl transition-transform duration-700 ease-in-out scale-100 group-hover:scale-90"
           />
         </div>
       </div>

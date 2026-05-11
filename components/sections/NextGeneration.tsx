@@ -17,7 +17,8 @@ export default function NextGeneration() {
               {/* Left — text content */}
               <div className="flex flex-col gap-7 order-1">
                 {/* Badge */}
-                <span className="inline-flex w-fit items-center px-4 py-1.5 rounded-full border border-white/15 bg-white/5 text-sm font-normal text-white/80 tracking-wide">
+                {/* <span className="inline-flex w-fit items-center px-4 py-1.5 rounded-full border border-white/15 bg-white/5 text-sm font-normal text-white/80 tracking-wide"></span> */}
+                <span className="w-fit shadow-[0_14px_44px_rgba(0,0,0,0.45)] backdrop-blur-md inline-flex items-center px-5 py-2 rounded-2xl bg-[#1e1e20] border-2 border-white/20 text-zinc-400 text-sm md:text-lg font-base tracking-wide bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]">
                   Innodyn
                 </span>
 
