@@ -8,6 +8,7 @@ import OurPhilosophy from "@/components/sections/OurPhilosophy";
 import ProductExperience from "@/components/sections/ProductExperience";
 import HigherStandards from "@/components/sections/HigherStandards";
 import NextGeneration from "@/components/sections/NextGeneration";
+import WhyChoose from "@/components/sections/WhyChoose";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <OurPhilosophy />
         <ProductExperience />
         <HigherStandards />
+        <WhyChoose />x
         <NextGeneration />
       </div>
       <Footer />

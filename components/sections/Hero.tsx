@@ -3,7 +3,22 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-1 min-h-screen items-center overflow-hidden hero-grid">
+    <section className="relative flex flex-1 min-h-screen items-center overflow-hidden">
+      {/* Background video */}
+      <video
+        aria-hidden
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/videos/tunnel.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay to tone down the video */}
+      <div aria-hidden className="absolute inset-0 bg-black/60 pointer-events-none" />
+
       {/* Radial glow behind object */}
       <div aria-hidden className="absolute inset-0 pointer-events-none hero-glow" />
 

@@ -109,7 +109,21 @@ export default function ProductExperience() {
             </div>
 
             {/* Headline */}
-            <div className="text-center mb-3 leading-tight">
+            <div className="relative text-center mb-3 leading-tight max-w-5xl mx-auto px-4 lg:px-0">
+              <Image
+                src="/images/left-line.png"
+                alt=""
+                width={176}
+                height={176}
+                className="absolute left-25 top-10 w-38 h-32 hidden lg:block pointer-events-none select-none"
+              />
+              <Image
+                src="/images/right-line.png"
+                alt=""
+                width={176}
+                height={176}
+                className="absolute right-25 top-10 w-38 h-32 hidden lg:block pointer-events-none select-none"
+              />
               <span className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
                 Product.{" "}
               </span>
