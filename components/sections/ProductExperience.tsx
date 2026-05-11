@@ -93,11 +93,11 @@ export default function ProductExperience() {
   const [activeCard, setActiveCard] = useState(1);
 
   return (
-    <section className="py-20 lg:py-28 px-2 md:px-20 lg:px-30">
+    <section className="py-12 lg:py-20 px-2 md:px-20 lg:px-30">
       {/* max-w-7xl mx-auto */}
       <div className="px-4 lg:px-0 ">
         {/* Outer luxury container */}
-        <div className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] border border-white/[0.07] bg-[#111113] overflow-hidden px-8 pt-14 pb-8 sm:px-12 sm:pt-16 sm:pb-10 lg:px-16 lg:pt-20 lg:pb-12">
+        <div className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] border border-white/[0.07] bg-[#111113] overflow-hidden px-8 pt-14 pb-12 sm:px-12 sm:pt-16 sm:pb-15 lg:px-16 lg:pt-20 lg:pb-20">
           <PerspectiveGrid />
 
           <div className="relative z-10">
@@ -170,6 +170,7 @@ export default function ProductExperience() {
                           src="/images/card-bg-shape.png"
                           alt=""
                           fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-contain object-left"
                         />
                       </div>
@@ -252,6 +253,7 @@ export default function ProductExperience() {
                           src="/images/card-bg-shape.png"
                           alt=""
                           fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-contain object-left"
                         />
                       </div>

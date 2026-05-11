@@ -2,14 +2,30 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 const rowOneCards = [
-  { number: "01", title: "Advanced Browsing" },
-  { number: "02", title: "Stronger Brand Discipline" },
-  { number: "03", title: "Better Product Organization" },
+  { number: "01", title: "Advanced Browsing", glow: "rgba(99,102,241,0.18)" },
+  {
+    number: "02",
+    title: "Stronger Brand Discipline",
+    glow: "rgba(139,92,246,0.12)",
+  },
+  {
+    number: "03",
+    title: "Better Product Organization",
+    glow: "rgba(251,146,60,0.18)",
+  },
 ];
 
 const rowTwoCards = [
-  { number: "04", title: "A Cleaner And More Sophisticated Platform" },
-  { number: "05", title: "A More Credible Overall Experience" },
+  {
+    number: "04",
+    title: "A Cleaner And More Sophisticated Platform",
+    glow: "rgba(251,146,60,0.18)",
+  },
+  {
+    number: "05",
+    title: "A More Credible Overall Experience",
+    glow: "rgba(45,212,191,0.18)",
+  },
 ];
 
 function Card({
@@ -18,15 +34,23 @@ function Card({
   image,
   imageWidth,
   imageHeight,
+  glow,
 }: {
   number: string;
   title: string;
   image: string;
   imageWidth: number;
   imageHeight: number;
+  glow: string;
 }) {
   return (
-    <div className="flex flex-col rounded-[1.75rem] bg-[#161618] border border-white/8 overflow-hidden">
+    <div className="relative flex flex-col rounded-[1.75rem] bg-[#161618] border border-white/8 overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse at 50% 0%, ${glow} 0%, transparent 70%)`,
+        }}
+      />
       <div className="p-8 pb-0 mb-12">
         <div className="rounded-[1.25rem] overflow-hidden bg-black">
           <Image
@@ -52,7 +76,15 @@ function Card({
 
 export default function WhyChoose() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="relative isolate py-20 lg:py-28 overflow-hidden bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]">
+      <Image
+        src="/images/hero-object.png"
+        alt=""
+        width={600}
+        height={600}
+        className="absolute top-0 -right-20 w-140 lg:w-180 xl:w-200 h-auto opacity-15 -z-10 -rotate-10 pointer-events-none select-none"
+        priority
+      />
       <div className="max-w-7xl mx-auto px-4 lg:px-0">
         {/* Heading */}
         <div className="relative text-center mb-12 lg:mb-16">
@@ -94,6 +126,7 @@ export default function WhyChoose() {
               image="/images/frame-image-3.png"
               imageWidth={673}
               imageHeight={426}
+              glow={card.glow}
             />
           ))}
         </div>
@@ -108,6 +141,7 @@ export default function WhyChoose() {
               image="/images/frame-image-4.png"
               imageWidth={827}
               imageHeight={364}
+              glow={card.glow}
             />
           ))}
         </div>

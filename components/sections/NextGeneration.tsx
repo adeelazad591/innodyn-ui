@@ -3,11 +3,14 @@ import Button from "@/components/ui/Button";
 
 export default function NextGeneration() {
   return (
-    <section className="py-20 lg:py-28 px-2 md:px-20 lg:px-30">
+    <section className="py-10 lg:py-0 px-2 md:px-20 lg:px-30">
       <div className="px-4 lg:px-0">
         {/* Outer luxury container — same card as ProductExperience */}
         <div className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] border border-white/[0.07] overflow-hidden px-8 pt-14 pb-8 sm:px-12 sm:pt-16 sm:pb-10 lg:px-16 lg:pt-20 lg:pb-12">
-          <div aria-hidden className="absolute inset-0 pointer-events-none overflow-hidden rounded-[2.5rem] card-perspective-grid" />
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none overflow-hidden rounded-[2.5rem] card-perspective-grid"
+          />
 
           <div className="relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">

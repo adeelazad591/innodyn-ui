@@ -22,7 +22,7 @@ export default function Home() {
         <OurPhilosophy />
         <ProductExperience />
         <HigherStandards />
-        <WhyChoose />x
+        <WhyChoose />
         <NextGeneration />
       </div>
       <Footer />
