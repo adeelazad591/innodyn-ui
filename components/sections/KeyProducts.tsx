@@ -89,7 +89,7 @@ export default function KeyProducts() {
 
         {/* View all products CTA */}
         <div className="flex justify-center mt-12">
-          <Button label=" View All Products" />
+          <Button label="View All Products" href="/standards" />
         </div>
       </div>
     </section>

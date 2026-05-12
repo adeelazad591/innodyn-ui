@@ -3,12 +3,20 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
 
-const navLinks = ["Home", "About", "Standards", "Compounds", "How It Works"];
+const navLinks: { label: string; href: string }[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "#" },
+  { label: "Standards", href: "/standards" },
+  { label: "Compounds", href: "#" },
+  { label: "How It Works", href: "#" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/[0.04]">
@@ -29,18 +37,18 @@ export default function Navbar() {
 
         {/* Desktop — centered nav links */}
         <ul className="hidden min-[1400px]:flex items-center gap-1 bg-[#1a1a1a] py-4 px-4 rounded-full border border-white/5">
-          {navLinks.map((link) => (
-            <li key={link}>
-              <a
-                href="#"
+          {navLinks.map(({ label, href }) => (
+            <li key={label}>
+              <Link
+                href={href}
                 className={`px-6 py-3 rounded-full text-lg font-medium transition-colors ${
-                  link === "Home"
+                  pathname === href
                     ? "bg-gradient-to-b from-[#3a3a3a] to-[#252525] text-white border border-white/10 shadow-inner"
                     : "text-zinc-300 hover:text-white"
                 }`}
               >
-                {link}
-              </a>
+                {label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -84,19 +92,19 @@ export default function Navbar() {
       {isOpen && (
         <div className="min-[1400px]:hidden border-t border-white/6 bg-[#0a0a0a]/95 backdrop-blur-md">
           <ul className="max-w-[1680px] mx-auto px-4 py-3 flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href="#"
+            {navLinks.map(({ label, href }) => (
+              <li key={label}>
+                <Link
+                  href={href}
                   onClick={() => setIsOpen(false)}
                   className={`flex items-center px-4 py-3 rounded-xl text-[15px] font-medium transition-colors ${
-                    link === "Home"
+                    pathname === href
                       ? "bg-white/[0.08] text-white"
                       : "text-zinc-300 hover:text-white hover:bg-white/[0.05]"
                   }`}
                 >
-                  {link}
-                </a>
+                  {label}
+                </Link>
               </li>
             ))}
           </ul>
