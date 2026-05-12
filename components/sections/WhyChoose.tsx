@@ -78,11 +78,11 @@ export default function WhyChoose() {
   return (
     <section className="relative isolate py-20 lg:py-28 overflow-hidden bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]">
       <Image
-        src="/images/hero-object.png"
+        src="/images/shape-bg.png"
         alt=""
         width={600}
         height={600}
-        className="absolute top-0 -right-20 w-140 lg:w-180 xl:w-200 h-auto opacity-15 -z-10 -rotate-10 pointer-events-none select-none"
+        className="absolute -top-15 -right-20 w-140 lg:w-180 xl:w-180 h-auto opacity-100 -z-10 -rotate-10 pointer-events-none select-none"
         priority
       />
       <div className="max-w-7xl mx-auto px-4 lg:px-0">

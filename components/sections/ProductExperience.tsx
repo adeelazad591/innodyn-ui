@@ -100,6 +100,20 @@ export default function ProductExperience() {
         <div className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] border border-white/[0.07] bg-[#111113] overflow-hidden px-8 pt-14 pb-12 sm:px-12 sm:pt-16 sm:pb-15 lg:px-16 lg:pt-20 lg:pb-20">
           <PerspectiveGrid />
 
+          {/* Circle shape background — right side decoration */}
+          <div
+            aria-hidden
+            className="absolute top-0 -right-100 w-200 h-200 pointer-events-none select-none z-0"
+          >
+            <Image
+              src="/images/circle-shape.png"
+              alt=""
+              fill
+              sizes="480px"
+              className="object-contain opacity-40"
+            />
+          </div>
+
           <div className="relative z-10">
             {/* Badge */}
             <div className="flex justify-center mb-8">
@@ -140,7 +154,7 @@ export default function ProductExperience() {
             {/* Cards panel */}
             <div className="bg-[#181819] rounded-4xl border border-white/5.5 p-4 sm:p-5 lg:p-6 max-w-350 mx-auto">
               {/* Flex layout — active card expands horizontally */}
-              <div className="hidden lg:flex gap-4">
+              <div className="hidden lg:flex gap-4 h-80">
                 {CARDS.map((card, index) => {
                   const isActive = activeCard === index;
                   return (
