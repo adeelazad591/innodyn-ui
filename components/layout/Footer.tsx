@@ -15,9 +15,9 @@ const NAV_COLS = [
   },
 ];
 
-function SendIcon() {
+function SendIcon({ className = "" }: { className?: string }) {
   return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden className={className}>
       <path
         d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"
         stroke="currentColor"
@@ -92,24 +92,27 @@ export default function Footer() {
                 height={160}
                 className="h-40 w-50"
               />
-              <p className="text-base font-normal text-zinc-400 leading-[1.75]">
+              <p className="text-base md:text-lg font-normal text-zinc-400 leading-[1.75]">
                 A science-first platform built around precision, disciplined
                 presentation, and a more refined standard for informed
                 customers.
               </p>
               {/* Email subscribe */}
-              <div className="flex items-center bg-[#111111] border border-white/8 rounded-xl overflow-hidden">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="flex-1 bg-transparent text-zinc-300 placeholder:text-zinc-600 text-base px-4 py-3.5 outline-none min-w-0"
-                />
+              <div className="flex items-center gap-4 w-full max-w-180">
+                <div className="flex-1 h-16 rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_top,rgba(80,80,84,0.45)_0%,rgba(12,12,14,1)_75%)] backdrop-blur-xl overflow-hidden">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full h-full bg-transparent px-9 text-white placeholder:text-zinc-400 text-[20px] font-medium outline-none"
+                  />
+                </div>
+
                 <button
                   type="button"
                   aria-label="Subscribe"
-                  className="flex items-center justify-center w-12 h-12 m-1 rounded-lg bg-zinc-600/70 text-white hover:bg-zinc-500/80 transition-colors shrink-0"
+                  className="cursor-pointer w-16 h-16 rounded-2xl  bg-[radial-gradient(circle_at_top,rgba(120,120,124,0.9)_0%,rgba(60,60,64,0.95)_100%)] flex items-center justify-center text-white transition-all duration-300 hover:scale-[1.03]"
                 >
-                  <SendIcon />
+                  <SendIcon className="w-8 h-8 -rotate-2" />
                 </button>
               </div>
             </div>
@@ -143,7 +146,7 @@ export default function Footer() {
 
           {/* Bottom bar */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p className="text-zinc-500 text-sm">
+            <p className="text-zinc-400 text-sm md:text-lg">
               © 2024 All Rights Reserved Innodyn .
             </p>
             <div className="flex items-center gap-3">
@@ -156,7 +159,7 @@ export default function Footer() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-700/50 border border-white/8 text-zinc-300 hover:text-white hover:bg-zinc-600/60 transition-colors"
+                  className="flex items-center justify-center w-12 h-12 bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] rounded-full bg-zinc-700/50 border border-white/8 text-zinc-300 hover:text-white hover:bg-zinc-600/60  transition-all duration-300 hover:scale-[1.05]"
                 >
                   <Icon />
                 </a>

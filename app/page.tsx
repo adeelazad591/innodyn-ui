@@ -24,8 +24,8 @@ export default function Home() {
         <HigherStandards />
         <WhyChoose />
         <NextGeneration />
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 }

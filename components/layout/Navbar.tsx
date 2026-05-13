@@ -43,7 +43,7 @@ export default function Navbar() {
                 href={href}
                 className={`px-6 py-3 rounded-full text-lg font-medium transition-colors ${
                   pathname === href
-                    ? "bg-gradient-to-b from-[#3a3a3a] to-[#252525] text-white border border-white/10 shadow-inner"
+                    ? "bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] text-white border border-white/10 shadow-inner"
                     : "text-zinc-300 hover:text-white"
                 }`}
               >
@@ -67,7 +67,13 @@ export default function Navbar() {
           className="min-[1400px]:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/6 border border-white/8 text-white transition-colors hover:bg-white/10"
         >
           {isOpen ? (
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden>
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              aria-hidden
+            >
               <path
                 d="M1.5 1.5l12 12M13.5 1.5l-12 12"
                 stroke="currentColor"
@@ -76,7 +82,13 @@ export default function Navbar() {
               />
             </svg>
           ) : (
-            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden>
+            <svg
+              width="16"
+              height="12"
+              viewBox="0 0 16 12"
+              fill="none"
+              aria-hidden
+            >
               <path
                 d="M0 1h16M0 6h16M0 11h16"
                 stroke="currentColor"

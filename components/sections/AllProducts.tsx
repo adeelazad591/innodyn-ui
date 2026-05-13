@@ -18,8 +18,7 @@ const PRODUCTS: Product[] = [
     id: "1",
     name: "5-AMINO-1-MQ",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -27,8 +26,13 @@ const PRODUCTS: Product[] = [
     id: "2",
     name: "7-KETO DHEA",
     inStock: false,
-    tags: ["50MG", "TABLET/CAPSULE", "ORAL"],
-    details: ["Morning with food", "50 mg PO once daily"],
+    tags: [
+      "50MG",
+      "TABLET/CAPSULE",
+      "ORAL",
+      "Morning with food",
+      "50 mg PO once daily",
+    ],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -36,8 +40,7 @@ const PRODUCTS: Product[] = [
     id: "3",
     name: "5-AMINO1MQ/SLU-PP-332",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -45,8 +48,7 @@ const PRODUCTS: Product[] = [
     id: "4",
     name: "5-AMINO-1-MQ",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -54,8 +56,13 @@ const PRODUCTS: Product[] = [
     id: "5",
     name: "7-KETO DHEA",
     inStock: false,
-    tags: ["50MG", "TABLET/CAPSULE", "ORAL"],
-    details: ["Morning with food", "50 mg PO once daily"],
+    tags: [
+      "50MG",
+      "TABLET/CAPSULE",
+      "ORAL",
+      "Morning with food",
+      "50 mg PO once daily",
+    ],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -63,8 +70,7 @@ const PRODUCTS: Product[] = [
     id: "6",
     name: "5-AMINO1MQ/SLU-PP-332",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -72,8 +78,7 @@ const PRODUCTS: Product[] = [
     id: "7",
     name: "5-AMINO-1-MQ",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -81,8 +86,13 @@ const PRODUCTS: Product[] = [
     id: "8",
     name: "7-KETO DHEA",
     inStock: false,
-    tags: ["50MG", "TABLET/CAPSULE", "ORAL"],
-    details: ["Morning with food", "50 mg PO once daily"],
+    tags: [
+      "50MG",
+      "TABLET/CAPSULE",
+      "ORAL",
+      "Morning with food",
+      "50 mg PO once daily",
+    ],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -90,8 +100,7 @@ const PRODUCTS: Product[] = [
     id: "9",
     name: "5-AMINO1MQ/SLU-PP-332",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -102,7 +111,7 @@ export default function AllProducts() {
   const [search, setSearch] = useState("");
 
   const filtered = PRODUCTS.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
+    p.name.toLowerCase().includes(search.toLowerCase()),
   );
 
   return (
@@ -129,7 +138,13 @@ export default function AllProducts() {
               fill="none"
               aria-hidden
             >
-              <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.5" />
+              <circle
+                cx="7"
+                cy="7"
+                r="5.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              />
               <path
                 d="M11 11l3 3"
                 stroke="currentColor"

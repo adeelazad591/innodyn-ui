@@ -6,8 +6,7 @@ const PRODUCTS: Product[] = [
     id: "1",
     name: "5-AMINO-1-MQ",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -15,8 +14,13 @@ const PRODUCTS: Product[] = [
     id: "2",
     name: "7-KETO DHEA",
     inStock: false,
-    tags: ["50MG", "TABLET/CAPSULE", "ORAL"],
-    details: ["Morning with food", "50 mg PO once daily"],
+    tags: [
+      "50MG",
+      "TABLET/CAPSULE",
+      "ORAL",
+      "Morning with food",
+      "50 mg PO once daily",
+    ],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -24,8 +28,7 @@ const PRODUCTS: Product[] = [
     id: "3",
     name: "5-AMINO1MQ/SLU-PP-332",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -33,8 +36,7 @@ const PRODUCTS: Product[] = [
     id: "4",
     name: "5-AMINO-1-MQ",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -42,8 +44,13 @@ const PRODUCTS: Product[] = [
     id: "5",
     name: "7-KETO DHEA",
     inStock: false,
-    tags: ["50MG", "TABLET/CAPSULE", "ORAL"],
-    details: ["Morning with food", "50 mg PO once daily"],
+    tags: [
+      "50MG",
+      "TABLET/CAPSULE",
+      "ORAL",
+      "Morning with food",
+      "50 mg PO once daily",
+    ],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -51,8 +58,37 @@ const PRODUCTS: Product[] = [
     id: "6",
     name: "5-AMINO1MQ/SLU-PP-332",
     inStock: true,
-    tags: ["50MG", "TROCHE", "ORAL", "Morning"],
-    details: ["50 mg PO once daily"],
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
+    price: "$39.99",
+    image: "/images/products/product-1.png",
+  },
+  {
+    id: "7",
+    name: "5-AMINO-1-MQ",
+    inStock: true,
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
+    price: "$39.99",
+    image: "/images/products/product-1.png",
+  },
+  {
+    id: "8",
+    name: "7-KETO DHEA",
+    inStock: false,
+    tags: [
+      "50MG",
+      "TABLET/CAPSULE",
+      "ORAL",
+      "Morning with food",
+      "50 mg PO once daily",
+    ],
+    price: "$39.99",
+    image: "/images/products/product-1.png",
+  },
+  {
+    id: "9",
+    name: "5-AMINO1MQ/SLU-PP-332",
+    inStock: true,
+    tags: ["50MG", "TROCHE", "ORAL", "Morning", "50 mg PO once daily"],
     price: "$39.99",
     image: "/images/products/product-1.png",
   },
@@ -63,17 +99,18 @@ export default function KeyProducts() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 lg:px-0">
         {/* Section header */}
-        <div className="flex items-start justify-between gap-12 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 sm:gap-8 lg:gap-12 mb-10 sm:mb-12">
           <div className="shrink-0">
-            <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
+            <h2 className="text-[2rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
               Our Key
             </h2>
-            <h2 className="font-extrabold italic font-serif text-silver-gradient block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
+
+            <h2 className="font-extrabold italic font-serif text-silver-gradient block text-[2rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-[1.1]">
               Products.
             </h2>
           </div>
 
-          <p className="text-xl font-normal text-zinc-400 leading-[1.8] max-w-155 pt-2">
+          <p className="text-base sm:text-lg md:text-xl font-normal text-zinc-400 leading-[1.7] sm:leading-[1.8] max-w-full lg:max-w-155">
             Innodyn was created for a more discerning customer. Not for impulse
             buyers. Not for trend chasers. For individuals who want a platform
             that feels methodical, credible, and engineered with care.

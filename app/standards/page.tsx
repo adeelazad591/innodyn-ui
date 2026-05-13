@@ -15,8 +15,8 @@ export default function StandardsPage() {
       <StandardsHero />
       <div className="section-bg">
         <AllProducts />
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 }

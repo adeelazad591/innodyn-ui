@@ -7,13 +7,13 @@ export default function HigherStandards() {
       <div className="max-w-7xl mx-auto px-4 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left — frame image inside black box (shown second on mobile) */}
-          <div className="order-2 lg:order-1 rounded-[1.75rem] bg-[#000000] p-10 pb-0">
+          <div className="order-2 lg:order-1 rounded-[1.75rem] bg-[#000000] px-6 sm:px-8 lg:px-10 pt-6 sm:pt-8 lg:pt-10 pb-0 flex justify-center overflow-hidden">
             <Image
               src="/images/frame-image.png"
               alt="Innodyn portal interface"
               width={550}
               height={581}
-              className="w-137.5 h-auto"
+              className="w-full max-w-137.5 h-auto object-contain"
             />
           </div>
 

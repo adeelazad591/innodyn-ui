@@ -5,7 +5,6 @@ export interface Product {
   name: string;
   inStock: boolean;
   tags: string[];
-  details: string[];
   price: string;
   image: string;
 }
@@ -49,21 +48,9 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-#A3A3A3 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10"
+              className="px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-#A3A3A3 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10 bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]"
             >
               {tag}
-            </span>
-          ))}
-        </div>
-
-        {/* Detail lines — same pill style */}
-        <div className="flex flex-wrap gap-2">
-          {product.details.map((detail, i) => (
-            <span
-              key={i}
-              className="px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-zinc-400 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10"
-            >
-              {detail}
             </span>
           ))}
         </div>
