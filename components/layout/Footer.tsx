@@ -80,7 +80,7 @@ export default function Footer() {
           aria-hidden
           className="footer-grid pointer-events-none absolute top-0 right-0 w-[55%] h-[60%]"
         />
-        <div className="max-w-7xl mx-auto px-4 lg:px-0">
+        <div className="max-w-7xl mx-auto px-0 lg:px-0">
           {/* Main content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-8 mb-14">
             {/* Left — brand + email */}
@@ -118,7 +118,7 @@ export default function Footer() {
             </div>
 
             {/* Right — nav columns */}
-            <div className="grid grid-cols-3 gap-6 lg:pl-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 lg:pl-12">
               {NAV_COLS.map((col, i) => (
                 <div key={i}>
                   <h4 className="text-white text-base md:text-lg font-bold mb-6">
