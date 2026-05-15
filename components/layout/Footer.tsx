@@ -3,15 +3,27 @@ import Image from "next/image";
 const NAV_COLS = [
   {
     heading: "Quick link",
-    links: ["Home", "About us", "Compounds"],
+    links: [
+      { label: "Home", href: "/" },
+      { label: "About us", href: "/about" },
+      { label: "Compounds", href: "/compounds" },
+    ],
   },
   {
     heading: "Quick link",
-    links: ["Standard", "How it works", "Contact Us"],
+    links: [
+      { label: "Standard", href: "/standards" },
+      { label: "How it works", href: "/how-it-works" },
+      { label: "Contact Us", href: "/contact" },
+    ],
   },
   {
     heading: "Legal",
-    links: ["Terms & Conditions", "Privacy Policy", "FAQ's"],
+    links: [
+      { label: "Terms & Conditions", href: "#" },
+      { label: "Privacy Policy", href: "#" },
+      { label: "FAQ's", href: "/faqs" },
+    ],
   },
 ];
 
@@ -126,12 +138,12 @@ export default function Footer() {
                   </h4>
                   <ul className="flex flex-col gap-4">
                     {col.links.map((link) => (
-                      <li key={link}>
+                      <li key={link.label}>
                         <a
-                          href="#"
+                          href={link.href}
                           className="text-zinc-400 hover:text-white transition-colors text-base md:text-lg"
                         >
-                          {link}
+                          {link.label}
                         </a>
                       </li>
                     ))}
