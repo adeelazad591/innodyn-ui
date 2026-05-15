@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StandardsHero from "@/components/sections/StandardsHero";
 import SplitFeature from "@/components/sections/SplitFeature";
+import FeatureShowcase from "@/components/sections/FeatureShowcase";
 
 export const metadata = {
   title: "About | Innodyn",
@@ -17,6 +18,71 @@ const HERO_CONTENT = {
     { label: "Explore Compounds", href: "/compounds" },
     { label: "View Our Standards", href: "/standards" },
   ],
+};
+
+const WHAT_WE_STAND_FOR_CONTENT = {
+  headingStart: "What We",
+  headingHighlight: "Stand For.",
+  description:
+    "Our standards extend beyond product selection. They influence how our systems are built, how our catalog is structured, how our brand communicates, and how our customers experience the platform from beginning to end.",
+  rowOne: {
+    cards: [
+      {
+        number: "01",
+        title: "Advanced Browsing",
+        description:
+          "We Believe Informed Customers Should Engage With A Brand That Feels Intelligent.",
+        glow: "rgba(99,102,241,0.18)",
+        imageSrc: "/images/frame-image-3.png",
+        imageWidth: 673,
+        imageHeight: 426,
+      },
+      {
+        number: "02",
+        title: "Precision Over Exaggeration",
+        description: "We Prioritize Measured Presentation, Exact Thinking.",
+        glow: "rgba(139,92,246,0.12)",
+        imageSrc: "/images/frame-image-3.png",
+        imageWidth: 673,
+        imageHeight: 426,
+      },
+      {
+        number: "03",
+        title: "Structured Clarity Over Clutter",
+        description:
+          "Every Touchpoint Is Designed To Feel Organized and Clean.",
+        glow: "rgba(251,146,60,0.18)",
+        imageSrc: "/images/frame-image-3.png",
+        imageWidth: 673,
+        imageHeight: 426,
+      },
+    ],
+  },
+  rowTwo: {
+    cards: [
+      {
+        number: "04",
+        title: "Consistency Over Improvisation",
+        description:
+          "Trust Is Built When A Company Behaves With Repeatable Standards, Dependable Systems.",
+        glow: "rgba(251,146,60,0.18)",
+        imageSrc: "/images/frame-image-4.png",
+        imageWidth: 827,
+        imageHeight: 364,
+      },
+      {
+        number: "05",
+        title: "Credibility Over Spectacle",
+        description:
+          "Innodyn Is Designed To Earn Respect Through Seriousness, Technical Sophistication, And A More Disciplined Brand Environment.",
+        glow: "rgba(45,212,191,0.18)",
+        imageSrc: "/images/frame-image-4.png",
+        imageWidth: 827,
+        imageHeight: 364,
+      },
+    ],
+  },
+  cta: { label: "View Our Standards", href: "/standards" },
 };
 
 const PHILOSOPHY_CONTENT = {
@@ -46,6 +112,7 @@ export default function StandardsPage() {
       <StandardsHero {...HERO_CONTENT} />
       <section className="section-bg">
         <SplitFeature {...PHILOSOPHY_CONTENT} />
+        <FeatureShowcase {...WHAT_WE_STAND_FOR_CONTENT} />
       </section>
       <Footer />
     </main>
