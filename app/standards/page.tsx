@@ -10,8 +10,8 @@ export const metadata = {
 };
 
 const HERO_CONTENT = {
-  titleStart: "Standards are not a slogan.",
-  titleHighlight: "They are the foundation.",
+  titleStart: "Standards Are Not A Alogan.",
+  titleHighlight: "They Are The Foundation.",
   titleHighlightNewLine: true,
   description:
     "At Innodyn, standards are not decorative language. They are the operating principle behind every aspect of the company.",

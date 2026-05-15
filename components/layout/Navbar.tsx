@@ -11,7 +11,7 @@ const navLinks: { label: string; href: string }[] = [
   { label: "About", href: "/about" },
   { label: "Standards", href: "/standards" },
   { label: "Compounds", href: "/compounds" },
-  { label: "How It Works", href: "#" },
+  { label: "How It Works", href: "/how-it-works" },
 ];
 
 export default function Navbar() {

@@ -28,6 +28,7 @@ interface FeatureShowcaseProps {
   rowTwo: ShowcaseRow;
   cta?: FeatureShowcaseButton;
   showShapeBg?: boolean;
+  showGradientBg?: boolean;
 }
 
 function Card({
@@ -93,9 +94,10 @@ export default function FeatureShowcase({
   rowTwo,
   cta,
   showShapeBg = false,
+  showGradientBg = true,
 }: FeatureShowcaseProps) {
   return (
-    <section className="relative isolate py-20 lg:py-28 overflow-hidden bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]">
+    <section className={`relative isolate py-20 lg:py-28 overflow-hidden ${showGradientBg ? "bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]" : ""}`}>
       {showShapeBg && (
         <Image
           src="/images/shape-bg.png"
@@ -135,7 +137,7 @@ export default function FeatureShowcase({
         </div>
 
         {/* Row 1 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${rowOne.cards.length >= 3 ? "lg:grid-cols-3" : ""} gap-4 mb-4`}>
           {rowOne.cards.map((card) => (
             <Card
               key={card.number}

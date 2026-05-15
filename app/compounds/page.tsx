@@ -10,7 +10,7 @@ export const metadata = {
 
 const HERO_CONTENT = {
   titleStart: "Advanced compounds. Presented",
-  titleHighlight: "with clarity.",
+  titleHighlight: "With Clarity.",
   titleHighlightNewLine: true,
   description:
     "Innodyn’s catalog is designed for individuals who value structured presentation, scientific tone, and a more disciplined browsing experience.",
