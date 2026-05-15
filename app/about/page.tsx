@@ -34,7 +34,7 @@ const WHAT_WE_STAND_FOR_CONTENT = {
         description:
           "We Believe Informed Customers Should Engage With A Brand That Feels Intelligent.",
         glow: "rgba(99,102,241,0.18)",
-        imageSrc: "/images/frame-image-3.png",
+        imageSrc: "/images/frame-image-5.png",
         imageWidth: 673,
         imageHeight: 426,
       },

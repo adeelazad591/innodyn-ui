@@ -56,7 +56,7 @@ function Card({
         }}
       />
       <div className="p-8 pb-0 mb-12">
-        <div className="rounded-[1.25rem] overflow-hidden bg-black">
+        <div className="rounded-[1.25rem] overflow-hidden">
           <Image
             src={image}
             alt={title}

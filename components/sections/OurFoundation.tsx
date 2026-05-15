@@ -24,21 +24,22 @@ const ITEMS: FoundationItem[] = [
     title: "Intentional Decisions",
     description:
       "Every choice we make is deliberate. From product curation to platform design, we act with clarity of intent rather than reactive impulse.",
-    iconSrc: "/images/prod-experience-image-2.png",
+    iconSrc: "/images/prod-experience-image-3.png",
   },
   {
     id: "clarity",
     title: "Clarity in Execution",
     description:
       "We remove ambiguity from every interaction. Clean systems, clear language, and structured presentation define how we operate at every level.",
-    iconSrc: "/images/prod-experience-image-3.png",
+    iconSrc: "/images/prod-experience-image-4.png",
   },
   {
     id: "scientific",
     title: "Scientific Mindset",
     description:
       "We approach every decision through a scientific lens — evidence-based, rigorously evaluated, and grounded in verifiable standards rather than trend-driven assumptions.",
-    iconSrc: "/images/prod-experience-image-1.png",
+
+    iconSrc: "/images/prod-experience-image-2.png",
   },
 ];
 
