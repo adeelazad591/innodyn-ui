@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import StandardsHero from "@/components/sections/StandardsHero";
 import SplitFeature from "@/components/sections/SplitFeature";
 import FeatureShowcase from "@/components/sections/FeatureShowcase";
+import OurFoundation from "@/components/sections/OurFoundation";
 
 export const metadata = {
   title: "About | Innodyn",
@@ -129,6 +130,7 @@ export default function StandardsPage() {
       <StandardsHero {...HERO_CONTENT} />
       <section className="section-bg">
         <SplitFeature {...PHILOSOPHY_CONTENT} />
+        <OurFoundation />
         <FeatureShowcase {...WHAT_WE_STAND_FOR_CONTENT} />
         <SplitFeature {...OUR_VISION_CONTENT} />
         <Footer />
