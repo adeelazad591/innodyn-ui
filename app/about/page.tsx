@@ -13,6 +13,7 @@ export const metadata = {
 const HERO_CONTENT = {
   titleStart: "A Company Built For People Who Expect",
   titleHighlight: "Scientific Discipline.",
+  titleHighlightNewLine: true,
   description:
     "Innodyn was founded to bring a higher level of scientific rigor, structure, and credibility to a category that too often lacks restraint and precision.",
   buttons: [
@@ -34,7 +35,7 @@ const WHAT_WE_STAND_FOR_CONTENT = {
         description:
           "We Believe Informed Customers Should Engage With A Brand That Feels Intelligent.",
         glow: "rgba(99,102,241,0.18)",
-        imageSrc: "/images/frame-image-5.png",
+        imageSrc: "/images/frame-image-3.png",
         imageWidth: 673,
         imageHeight: 426,
       },

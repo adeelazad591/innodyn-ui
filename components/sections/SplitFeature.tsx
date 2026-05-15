@@ -6,6 +6,26 @@ interface SplitFeatureButton {
   href?: string;
 }
 
+type FloatingCardPosition =
+  | "top-left"
+  | "top-right"
+  | "bottom-left"
+  | "bottom-right";
+type FloatingCardShape = "rounded" | "pill";
+
+interface FloatingCard {
+  iconSrc: string;
+  iconAlt?: string;
+  title: string;
+  subtitle: string;
+  /** Corner of the visual to anchor the card */
+  position: FloatingCardPosition;
+  /** CSS background value — defaults to dark glassmorphism */
+  gradient?: string;
+  /** Card border-radius style — defaults to "rounded" */
+  shape?: FloatingCardShape;
+}
+
 interface SplitFeatureVisual {
   /** Center image */
   imageSrc: string;
@@ -17,13 +37,44 @@ interface SplitFeatureVisual {
   videoSrc?: string;
   /** Optional left + right flanking images rendered at a smaller scale */
   sideImages?: [{ src: string; alt: string }, { src: string; alt: string }];
+  /** CSS background-image value applied to the visual card (e.g. a radial gradient glow) */
+  backgroundGradient?: string;
+  /** Floating overlay cards positioned at the corners of the visual */
+  floatingCards?: FloatingCard[];
+  /** Decorative rounded-rect layers stacked behind the main visual */
+  backgroundLayers?: BackgroundLayer[];
+  /** When true, the card background is transparent instead of the default dark */
+  transparent?: boolean;
 }
+
+interface BackgroundLayer {
+  /** Scale relative to the main card — auto-calculated if omitted (1.06, 1.12, …) */
+  scale?: number;
+  /** Layer opacity — auto-calculated if omitted (0.45, 0.28, …) */
+  opacity?: number;
+  /** Optional CSS background-image for this layer */
+  gradient?: string;
+}
+
+const CARD_POSITIONS: Record<FloatingCardPosition, string> = {
+  "top-left": "top-6 -left-6",
+  "top-right": "top-6 -right-6",
+  "bottom-left": "bottom-6 -left-6",
+  "bottom-right": "bottom-6 -right-6",
+};
+
+const CARD_SHAPES: Record<FloatingCardShape, string> = {
+  rounded: "rounded-2xl",
+  pill: "rounded-[3rem]",
+};
 
 interface SplitFeatureProps {
   /** Plain heading prefix rendered in the bold sans style */
   headingStart: string;
   /** Italic serif suffix rendered in the silver-gradient style */
   headingHighlight: string;
+  /** When true, headingHighlight renders on its own line below headingStart */
+  headingHighlightNewLine?: boolean;
   paragraphs: string[];
   cta?: SplitFeatureButton;
   visual: SplitFeatureVisual;
@@ -34,6 +85,7 @@ interface SplitFeatureProps {
 export default function SplitFeature({
   headingStart,
   headingHighlight,
+  headingHighlightNewLine = false,
   paragraphs,
   cta,
   visual,
@@ -42,10 +94,21 @@ export default function SplitFeature({
   const textCol = (
     <div className="flex flex-col gap-8 lg:gap-10">
       <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
-        {headingStart}
-        <span className="font-serif ps-4 font-extrabold italic text-silver-gradient text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
-          {headingHighlight}
-        </span>
+        {headingHighlightNewLine ? (
+          <>
+            <span className="block">{headingStart}</span>
+            <span className="block font-serif font-extrabold italic text-silver-gradient leading-tight">
+              {headingHighlight}
+            </span>
+          </>
+        ) : (
+          <>
+            {headingStart}
+            <span className="font-serif ps-4 font-extrabold italic text-silver-gradient leading-tight">
+              {headingHighlight}
+            </span>
+          </>
+        )}
       </h2>
 
       <div className="flex flex-col gap-6">
@@ -71,74 +134,132 @@ export default function SplitFeature({
 
   const visualCol = (
     <div className="relative flex items-center justify-center lg:justify-end">
-      {isSimpleImage ? (
-        // Plain image: padded container so top/left/right spacing is equal, flush at bottom
-        <div className="relative w-full overflow-hidden rounded-3xl border border-white/8 bg-[#0e0e0e] px-6 sm:px-8 lg:px-10 pt-6 sm:pt-8 lg:pt-10 flex justify-center">
-          <Image
-            src={visual.imageSrc}
-            alt={visual.imageAlt}
-            width={visual.imageWidth ?? 320}
-            height={visual.imageHeight ?? 420}
-            className="w-full h-auto drop-shadow-2xl"
-          />
-        </div>
-      ) : (
-        // Video or sideImages: aspect-square with absolute positioning
-        <div className="relative w-full overflow-hidden rounded-3xl border border-white/8 bg-[#0e0e0e] aspect-square">
-          {visual.videoSrc && (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src={visual.videoSrc} type="video/mp4" />
-            </video>
-          )}
+      {/* isolate creates a stacking context so negative z-index layers stay contained */}
+      <div className="relative w-full isolate">
+        {/* Background layers — rendered first, scaled out behind the main card */}
+        {visual.backgroundLayers?.map((layer, i) => (
           <div
+            key={i}
             aria-hidden
-            className="absolute inset-0 pointer-events-none bg-black/30"
+            className="absolute inset-0 rounded-3xl border border-white/8 bg-[#0e0e0e] pointer-events-none"
+            style={{
+              transform: `scale(${layer.scale ?? 1 + (i + 1) * 0.055})`,
+              opacity: layer.opacity ?? 0.45 - i * 0.15,
+              zIndex: -(i + 1),
+              ...(layer.gradient ? { backgroundImage: layer.gradient } : {}),
+            }}
           />
+        ))}
+
+        {isSimpleImage ? (
+          // Plain image: padded container so top/left/right spacing is equal, flush at bottom
           <div
-            aria-hidden
-            className="absolute inset-0 pointer-events-none split-feature-glow"
-          />
-          {visual.sideImages ? (
-            <>
-              <Image
-                src={visual.sideImages[0].src}
-                alt={visual.sideImages[0].alt}
-                width={220}
-                height={320}
-                className="absolute top-1/2 left-[20%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
-              />
-              <Image
-                src={visual.imageSrc}
-                alt={visual.imageAlt}
-                width={visual.imageWidth ?? 320}
-                height={visual.imageHeight ?? 420}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[65%] w-auto object-contain drop-shadow-2xl z-10"
-              />
-              <Image
-                src={visual.sideImages[1].src}
-                alt={visual.sideImages[1].alt}
-                width={220}
-                height={320}
-                className="absolute top-1/2 left-[80%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
-              />
-            </>
-          ) : (
+            className={`relative w-full overflow-hidden rounded-[36px] border-0 border-white/8 px-6 sm:px-8 lg:px-10 pt-6 sm:pt-8 lg:pt-10 flex justify-center ${visual.transparent ? "bg-transparent" : "bg-[#0e0e0e]"}`}
+            style={
+              visual.backgroundGradient
+                ? { backgroundImage: visual.backgroundGradient }
+                : undefined
+            }
+          >
             <Image
               src={visual.imageSrc}
               alt={visual.imageAlt}
               width={visual.imageWidth ?? 320}
               height={visual.imageHeight ?? 420}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[78%] w-auto object-contain drop-shadow-2xl"
+              className="w-full h-auto drop-shadow-2xl"
             />
-          )}
-        </div>
-      )}
+          </div>
+        ) : (
+          // Video or sideImages: aspect-square with absolute positioning
+          <div
+            className={`relative w-full overflow-hidden rounded-3xl border border-white/8 aspect-square ${visual.transparent ? "bg-transparent" : "bg-[#0e0e0e]"}`}
+            style={
+              visual.backgroundGradient
+                ? { backgroundImage: visual.backgroundGradient }
+                : undefined
+            }
+          >
+            {visual.videoSrc && (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src={visual.videoSrc} type="video/mp4" />
+              </video>
+            )}
+            <div
+              aria-hidden
+              className="absolute inset-0 pointer-events-none bg-black/30"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 pointer-events-none split-feature-glow"
+            />
+            {visual.sideImages ? (
+              <>
+                <Image
+                  src={visual.sideImages[0].src}
+                  alt={visual.sideImages[0].alt}
+                  width={220}
+                  height={320}
+                  className="absolute top-1/2 left-[20%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
+                />
+                <Image
+                  src={visual.imageSrc}
+                  alt={visual.imageAlt}
+                  width={visual.imageWidth ?? 320}
+                  height={visual.imageHeight ?? 420}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[65%] w-auto object-contain drop-shadow-2xl z-10"
+                />
+                <Image
+                  src={visual.sideImages[1].src}
+                  alt={visual.sideImages[1].alt}
+                  width={220}
+                  height={320}
+                  className="absolute top-1/2 left-[80%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
+                />
+              </>
+            ) : (
+              <Image
+                src={visual.imageSrc}
+                alt={visual.imageAlt}
+                width={visual.imageWidth ?? 320}
+                height={visual.imageHeight ?? 420}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[78%] w-auto object-contain drop-shadow-2xl"
+              />
+            )}
+          </div>
+        )}
+
+        {/* Floating overlay cards */}
+        {visual.floatingCards?.map((card, i) => (
+          <div
+            key={i}
+            className={`absolute z-20 flex flex-col items-center gap-2 px-4 py-4 w-44 backdrop-blur-md border border-white/10 shadow-2xl [background:var(--card-bg,rgba(20,20,24,0.85))] ${CARD_SHAPES[card.shape ?? "rounded"]} ${CARD_POSITIONS[card.position]}`}
+            style={
+              card.gradient
+                ? ({ "--card-bg": card.gradient } as React.CSSProperties)
+                : undefined
+            }
+          >
+            <div className="w-11 h-11 rounded-full bg-white/10 border border-white/10 flex items-center justify-center">
+              <Image
+                src={card.iconSrc}
+                alt={card.iconAlt ?? card.title}
+                width={22}
+                height={22}
+              />
+            </div>
+            <p className="text-sm font-semibold text-white text-center leading-tight">
+              {card.title}
+            </p>
+            <p className="text-xs text-zinc-400 text-center">{card.subtitle}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 

@@ -8,6 +8,7 @@ interface HeroButton {
 interface StandardsHeroProps {
   titleStart: string;
   titleHighlight: string;
+  titleHighlightNewLine?: boolean;
   description: string;
   buttons?: readonly HeroButton[];
 }
@@ -15,6 +16,7 @@ interface StandardsHeroProps {
 export default function StandardsHero({
   titleStart,
   titleHighlight,
+  titleHighlightNewLine = false,
   description,
   buttons = [],
 }: StandardsHeroProps) {
@@ -50,10 +52,22 @@ export default function StandardsHero({
       {/* Content */}
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-6 pt-28 pb-16 text-center sm:gap-6 sm:px-10">
         <h1 className="text-[1.75rem] font-extrabold leading-tight tracking-tight text-white sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px]">
-          {titleStart}{" "}
-          <span className="text-silver-gradient font-serif italic">
-            {titleHighlight}
-          </span>
+          {titleHighlightNewLine ? (
+            <>
+              <span className="block">{titleStart}</span>
+              <span className="block text-silver-gradient font-serif italic">
+                {titleHighlight}
+              </span>
+            </>
+          ) : (
+            <>
+              {titleStart}
+              <span className="text-silver-gradient font-serif italic">
+                {" "}
+                {titleHighlight}
+              </span>
+            </>
+          )}
         </h1>
 
         <p className="max-w-xl lg:max-w-4xl text-base font-normal leading-relaxed text-zinc-400 sm:text-lg lg:text-xl xl:text-2xl">
