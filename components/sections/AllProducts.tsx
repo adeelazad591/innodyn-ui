@@ -119,19 +119,19 @@ export default function AllProducts() {
       <div className="max-w-7xl mx-auto px-4 lg:px-0">
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-6">
-          <div className="shrink-0">
-            <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
-              All
+          <div className="shrink-0 whitespace-nowrap">
+            <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight inline">
+              All{" "}
             </h2>
-            <h2 className="font-extrabold italic font-serif text-silver-gradient block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
+            <h2 className="font-extrabold italic font-serif text-silver-gradient inline text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
               Products.
             </h2>
           </div>
 
           {/* Search input */}
-          <div className="relative flex-1 max-w-xs sm:max-w-72">
+          <div className="relative flex-1 max-w-xs sm:max-w-88">
             <svg
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500 pointer-events-none"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white pointer-events-none w-6 h-6"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -157,7 +157,7 @@ export default function AllProducts() {
               placeholder="Search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-full bg-[#1a1a1a] border border-white/8 text-white placeholder:text-zinc-500 text-sm font-medium outline-none focus:border-white/20 transition-colors"
+              className="w-full pl-12 pr-4 h-12 rounded-[10px] bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.08)_0%,rgba(12,12,14,1)_75%)] bg-[#1a1a1a] border border-white/8 text-white placeholder:text-white text-sm font-medium outline-none focus:border-white/20 transition-colors"
             />
           </div>
         </div>
@@ -169,9 +169,9 @@ export default function AllProducts() {
               key={label}
               type="button"
               onClick={() => setActiveCategory(label)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-colors border ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-colors border cursor-pointer ${
                 activeCategory === label
-                  ? "bg-white/10 text-white border-white/15"
+                  ? "bg-white/10 text-white border-white/15 bg-[radial-gradient(circle_at_bottom,rgba(120,120,125,0.55)_0%,rgba(58,58,62,0.42)_30%,rgba(18,18,22,1)_100%)]"
                   : "text-zinc-400 border-white/8 hover:text-white hover:border-white/15"
               }`}
             >
@@ -179,7 +179,7 @@ export default function AllProducts() {
               <span
                 className={`px-2 py-0.5 rounded-full text-xs font-semibold ${
                   activeCategory === label
-                    ? "bg-white/15 text-white"
+                    ? "bg-white text-[#175CD3]"
                     : "bg-white/8 text-zinc-400"
                 }`}
               >

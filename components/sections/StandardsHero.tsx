@@ -16,21 +16,30 @@ export default function StandardsHero() {
       </video>
 
       {/* Dark overlay */}
-      <div aria-hidden className="absolute inset-0 bg-black/60 pointer-events-none" />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-black/60 pointer-events-none"
+      />
 
       {/* Radial glow */}
-      <div aria-hidden className="absolute inset-0 pointer-events-none hero-glow" />
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none hero-glow"
+      />
 
       {/* Soft edge vignette */}
-      <div aria-hidden className="absolute inset-0 pointer-events-none hero-vignette" />
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none hero-vignette"
+      />
 
       {/* Content — centered */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 pt-28 pb-16 flex flex-col items-center text-center gap-5 sm:gap-6">
-        <h1 className="tracking-tight">
-          <span className="font-extrabold text-white block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
-            Discover Our
+        <h1 className="tracking-tight whitespace-nowrap">
+          <span className="font-extrabold text-white inline text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] leading-tight">
+            Discover Our{" "}
           </span>
-          <span className="font-extrabold italic font-serif text-silver-gradient block text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-6xl leading-tight">
+          <span className="font-extrabold italic font-serif text-silver-gradient inline text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-6xl leading-tight">
             Products.
           </span>
         </h1>
