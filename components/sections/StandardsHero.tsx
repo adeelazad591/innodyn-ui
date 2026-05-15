@@ -56,7 +56,7 @@ export default function StandardsHero({
           </span>
         </h1>
 
-        <p className="max-w-xl text-base font-normal leading-relaxed text-zinc-400 sm:text-lg lg:max-w-2xl lg:text-xl xl:text-2xl">
+        <p className="max-w-xl lg:max-w-4xl text-base font-normal leading-relaxed text-zinc-400 sm:text-lg lg:text-xl xl:text-2xl">
           {description}
         </p>
 

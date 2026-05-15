@@ -1,7 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StandardsHero from "@/components/sections/StandardsHero";
-import AllProducts from "@/components/sections/AllProducts";
+import SplitFeature from "@/components/sections/SplitFeature";
 
 export const metadata = {
   title: "About | Innodyn",
@@ -17,7 +17,27 @@ const HERO_CONTENT = {
     { label: "Explore Compounds", href: "/compounds" },
     { label: "View Our Standards", href: "/standards" },
   ],
-} as const;
+};
+
+const PHILOSOPHY_CONTENT = {
+  headingStart: "Why Innodyn",
+  headingHighlight: "Exists.",
+  paragraphs: [
+    "From the beginning, Innodyn was built around the belief that informed customers deserve a better experience. They deserve a platform that feels measured rather than inflated, structured rather than chaotic, and credible rather than performative. Every aspect of our company reflects this belief.",
+    "We are not interested in following trends or imitating mass-market approaches. Innodyn exists to serve a more discerning customer — individuals who value quality, consistency, and thoughtful presentation.",
+    "At its core, Innodyn is about raising expectations. We believe companies in this space should be held to a higher standard, and we built Innodyn to embody that principle in every detail.",
+  ],
+  cta: { label: "Explore Compounds", href: "/compounds" },
+  visual: {
+    videoSrc: "/videos/portal.mp4",
+    imageSrc: "/images/products/product-lg-1.png",
+    imageAlt: "Innodyn 2X Blend product vial",
+    sideImages: [
+      { src: "/images/products/product-lg-1.png", alt: "Innodyn vial left" },
+      { src: "/images/products/product-lg-1.png", alt: "Innodyn vial right" },
+    ] as [{ src: string; alt: string }, { src: string; alt: string }],
+  },
+};
 
 export default function StandardsPage() {
   return (
@@ -25,7 +45,7 @@ export default function StandardsPage() {
       <Navbar />
       <StandardsHero {...HERO_CONTENT} />
       <section className="section-bg">
-        <AllProducts />
+        <SplitFeature {...PHILOSOPHY_CONTENT} />
       </section>
       <Footer />
     </main>
