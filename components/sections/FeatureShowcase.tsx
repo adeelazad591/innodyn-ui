@@ -1,35 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-
-interface ShowcaseCard {
-  number: string;
-  title: string;
-  description?: string;
-  glow: string;
-  imageSrc: string;
-  imageWidth: number;
-  imageHeight: number;
-}
-
-interface ShowcaseRow {
-  cards: ShowcaseCard[];
-}
-
-interface FeatureShowcaseButton {
-  label: string;
-  href?: string;
-}
-
-interface FeatureShowcaseProps {
-  headingStart: string;
-  headingHighlight: string;
-  description: string;
-  rowOne: ShowcaseRow;
-  rowTwo: ShowcaseRow;
-  cta?: FeatureShowcaseButton;
-  showShapeBg?: boolean;
-  showGradientBg?: boolean;
-}
+import type { FeatureShowcaseProps } from "@/types/types";
 
 function Card({
   number,

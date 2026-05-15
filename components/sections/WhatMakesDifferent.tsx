@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import type { CardData } from "@/types/types";
 
 function FlaskIcon() {
   return (
@@ -85,14 +86,6 @@ function BoltIcon() {
       />
     </svg>
   );
-}
-
-interface CardData {
-  id: number;
-  text: string;
-  icon: React.ReactNode;
-  gradient: string;
-  iconColor: string;
 }
 
 const CARDS: CardData[] = [

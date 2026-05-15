@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import ProductCard, { type Product } from "@/components/common/ProductCard";
+import ProductCard from "@/components/common/ProductCard";
+import type { Product } from "@/types/types";
 import Button from "@/components/ui/Button";
 
 const CATEGORIES = [
@@ -197,9 +198,9 @@ export default function AllProducts() {
         </div>
 
         {/* View all CTA */}
-        <div className="flex justify-center mt-12">
-          <Button label="View All Products" />
-        </div>
+        {/* <div className="flex justify-center mt-12">
+          <Button label="View All Products" href="/products" />
+        </div> */}
       </div>
     </section>
   );

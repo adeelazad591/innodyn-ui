@@ -1,17 +1,5 @@
 import Button from "@/components/ui/Button";
-
-interface HeroButton {
-  label: string;
-  href?: string;
-}
-
-interface StandardsHeroProps {
-  titleStart: string;
-  titleHighlight: string;
-  titleHighlightNewLine?: boolean;
-  description: string;
-  buttons?: readonly HeroButton[];
-}
+import type { StandardsHeroProps } from "@/types/types";
 
 export default function StandardsHero({
   titleStart,

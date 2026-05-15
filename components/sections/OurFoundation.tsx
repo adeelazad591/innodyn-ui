@@ -4,12 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
-interface FoundationItem {
-  id: string;
-  title: string;
-  description: string;
-  iconSrc: string;
-}
+import type { FoundationItem, OurFoundationProps } from "@/types/types";
 
 const ITEMS: FoundationItem[] = [
   {
@@ -42,10 +37,6 @@ const ITEMS: FoundationItem[] = [
     iconSrc: "/images/prod-experience-image-2.png",
   },
 ];
-
-interface OurFoundationProps {
-  cta?: { label: string; href?: string };
-}
 
 export default function OurFoundation({
   cta = { label: "Explore Compounds", href: "/compounds" },

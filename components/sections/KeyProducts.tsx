@@ -1,5 +1,6 @@
 import Button from "../ui/Button";
-import ProductCard, { type Product } from "../common/ProductCard";
+import ProductCard from "../common/ProductCard";
+import type { Product } from "@/types/types";
 
 const PRODUCTS: Product[] = [
   {

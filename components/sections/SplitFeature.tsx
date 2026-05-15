@@ -1,60 +1,6 @@
 import Image from "next/image";
 import Button from "../ui/Button";
-
-interface SplitFeatureButton {
-  label: string;
-  href?: string;
-}
-
-type FloatingCardPosition =
-  | "top-left"
-  | "top-right"
-  | "bottom-left"
-  | "bottom-right";
-type FloatingCardShape = "rounded" | "pill";
-
-interface FloatingCard {
-  iconSrc: string;
-  iconAlt?: string;
-  title: string;
-  subtitle: string;
-  /** Corner of the visual to anchor the card */
-  position: FloatingCardPosition;
-  /** CSS background value — defaults to dark glassmorphism */
-  gradient?: string;
-  /** Card border-radius style — defaults to "rounded" */
-  shape?: FloatingCardShape;
-}
-
-interface SplitFeatureVisual {
-  /** Center image */
-  imageSrc: string;
-  imageAlt: string;
-  /** Intrinsic dimensions of the image — must match the actual file to avoid distortion */
-  imageWidth?: number;
-  imageHeight?: number;
-  /** Optional background video. Falls back to a plain dark card if omitted. */
-  videoSrc?: string;
-  /** Optional left + right flanking images rendered at a smaller scale */
-  sideImages?: [{ src: string; alt: string }, { src: string; alt: string }];
-  /** CSS background-image value applied to the visual card (e.g. a radial gradient glow) */
-  backgroundGradient?: string;
-  /** Floating overlay cards positioned at the corners of the visual */
-  floatingCards?: FloatingCard[];
-  /** Decorative rounded-rect layers stacked behind the main visual */
-  backgroundLayers?: BackgroundLayer[];
-  /** When true, the card background is transparent instead of the default dark */
-  transparent?: boolean;
-}
-
-interface BackgroundLayer {
-  /** Scale relative to the main card — auto-calculated if omitted (1.06, 1.12, …) */
-  scale?: number;
-  /** Layer opacity — auto-calculated if omitted (0.45, 0.28, …) */
-  opacity?: number;
-  /** Optional CSS background-image for this layer */
-  gradient?: string;
-}
+import type { FloatingCardPosition, FloatingCardShape, SplitFeatureProps } from "@/types/types";
 
 const CARD_POSITIONS: Record<FloatingCardPosition, string> = {
   "top-left": "top-6 -left-6",
@@ -67,20 +13,6 @@ const CARD_SHAPES: Record<FloatingCardShape, string> = {
   rounded: "rounded-2xl",
   pill: "rounded-[3rem]",
 };
-
-interface SplitFeatureProps {
-  /** Plain heading prefix rendered in the bold sans style */
-  headingStart: string;
-  /** Italic serif suffix rendered in the silver-gradient style */
-  headingHighlight: string;
-  /** When true, headingHighlight renders on its own line below headingStart */
-  headingHighlightNewLine?: boolean;
-  paragraphs: string[];
-  cta?: SplitFeatureButton;
-  visual: SplitFeatureVisual;
-  /** When true, the visual column appears on the left and text on the right */
-  visualLeft?: boolean;
-}
 
 export default function SplitFeature({
   headingStart,

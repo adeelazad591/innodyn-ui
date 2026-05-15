@@ -1,13 +1,5 @@
 import Image from "next/image";
-
-export interface Product {
-  id: string;
-  name: string;
-  inStock: boolean;
-  tags: string[];
-  price: string;
-  image: string;
-}
+import type { Product } from "@/types/types";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (

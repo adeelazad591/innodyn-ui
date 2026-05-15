@@ -29,7 +29,7 @@ const OUR_STANDARDS_CONTENT = {
     "The Innodyn standard is rooted in scientific discipline. We believe that credibility comes from rigor, and rigor requires consistency. Every layer of our company is designed to reflect an elevated level of thoughtfulness and control.",
     "This includes:Structured and refined catalog presentationPrecision-oriented product organizationClear and disciplined communication standardsConsistent platform-wide brand integrityHigher expectations for sourcing and quality review our standard is not reactive. It is built into the DNA of the company.",
   ],
-  cta: { label: "Contact us", href: "/contactus" },
+  cta: { label: "Contact us", href: "/contact" },
   visual: {
     imageSrc: "/images/mobile-image.png",
     imageAlt: "Innodyn app",

@@ -39,7 +39,7 @@ export default function WhyStandardsMatter() {
 
               {/* Buttons */}
               <div className="flex flex-wrap items-center gap-3">
-                <Button label="Contact Us" />
+                <Button label="Contact Us" href="/contact" />
               </div>
             </div>
 
