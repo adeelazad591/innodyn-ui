@@ -12,7 +12,7 @@ const HERO_CONTENT = {
   titleHighlight: "Innodyn.",
   description:
     "We believe serious companies should communicate with clarity and professionalism. Whether you are reaching out with a general inquiry.",
-  buttons: [{ label: "CView Our Standards", href: "/standards" }],
+  buttons: [{ label: "View Our Standards", href: "/standards" }],
 };
 
 export default function StandardsPage() {

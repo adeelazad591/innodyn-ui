@@ -17,7 +17,7 @@ const HERO_CONTENT = {
     "At Innodyn, standards are not decorative language. They are the operating principle behind every aspect of the company.",
   buttons: [
     { label: "Explore Compounds", href: "/compounds" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "Contact Us", href: "/contact" },
   ],
 };
 

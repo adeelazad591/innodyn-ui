@@ -15,8 +15,8 @@ const HERO_CONTENT = {
   description:
     "Innodyn’s catalog is designed for individuals who value structured presentation, scientific tone, and a more disciplined browsing experience.",
   buttons: [
-    { label: "View Our Standards", href: "/compounds" },
-    { label: "Contact Us", href: "/standards" },
+    { label: "View Our Standards", href: "/standards" },
+    { label: "Contact Us", href: "/contact" },
   ],
 };
 
@@ -28,7 +28,7 @@ const OUR_VISION_CONTENT = {
     "The Innodyn customer is not driven by hype. They are typically knowledgeable, detail-oriented, and selective in where they place their trust.",
     "Our compounds page is built with that audience in mind. Every element of presentation is designed to respect their intelligence and support a more informed experience. ",
   ],
-  cta: { label: "Contact Us", href: "/compounds" },
+  cta: { label: "Contact Us", href: "/contact" },
   visual: {
     imageSrc: "/images/frame-image-6.png",
     imageAlt: "Innodyn platform scheduling interface",
@@ -47,7 +47,7 @@ const MORE_STRUCTURED = {
     "This structure allows customers to:Browse with greater confidenceCompare options more efficientlyNavigate without distractionAccess product information in a cleaner format",
     "The result is a catalog experience that feels elevated, efficient, and aligned with the expectations of a serious buyer.",
   ],
-  cta: { label: "Contact Us", href: "/compounds" },
+  cta: { label: "Contact Us", href: "/contact" },
   visual: {
     videoSrc: "/videos/portal.mp4",
     imageSrc: "/images/products/product-2.png",

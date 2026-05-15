@@ -55,7 +55,7 @@ export default function Navbar() {
 
         {/* Desktop — CTA */}
         <div className="hidden min-[1400px]:flex justify-end min-w-40">
-          <Button label="View Our Standards" />
+          <Button label="View Our Standards" href="/standards" />
         </div>
 
         {/* Mobile / tablet — burger */}
@@ -103,7 +103,7 @@ export default function Navbar() {
       {/* Mobile / tablet — dropdown menu */}
       {isOpen && (
         <div className="min-[1400px]:hidden border-t border-white/6 bg-[#0a0a0a]/95 backdrop-blur-md">
-          <ul className="max-w-[1680px] mx-auto px-4 py-3 flex flex-col gap-1">
+          <ul className="max-w-420 mx-auto px-4 py-3 flex flex-col gap-1">
             {navLinks.map(({ label, href }) => (
               <li key={label}>
                 <Link
@@ -111,8 +111,8 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`flex items-center px-4 py-3 rounded-xl text-[15px] font-medium transition-colors ${
                     pathname === href
-                      ? "bg-white/[0.08] text-white"
-                      : "text-zinc-300 hover:text-white hover:bg-white/[0.05]"
+                      ? "bg-white/8 text-white"
+                      : "text-zinc-300 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {label}

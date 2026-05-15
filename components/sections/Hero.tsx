@@ -58,8 +58,8 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 min-[1400px]:gap-4">
-            <Button label="Explore Compounds" />
-            <Button label="View Our Standards" />
+            <Button label="Explore Compounds" href="/compounds" />
+            <Button label="View Our Standards" href="/standards" />
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ const HERO_CONTENT = {
   description: "Peak performance isn't accidental. It's engineered.",
   buttons: [
     { label: "Explore Compounds", href: "/compounds" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "Contact Us", href: "/contact" },
   ],
 };
 

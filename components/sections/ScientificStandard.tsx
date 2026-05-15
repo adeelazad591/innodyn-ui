@@ -39,7 +39,7 @@ export default function ScientificStandard() {
               science-forward brand built for people who expect more.
             </p>
             <div>
-              <Button label="Explore Compounds" />
+              <Button label="Explore Compounds" href="/compounds" />
             </div>
           </div>
 
