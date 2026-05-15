@@ -4,19 +4,20 @@ import StandardsHero from "@/components/sections/StandardsHero";
 import AllProducts from "@/components/sections/AllProducts";
 
 export const metadata = {
-  title: "Standards | Innodyn",
+  title: "About | Innodyn",
   description: "Explore our full catalog of precision compounds.",
 };
 
 const HERO_CONTENT = {
-  titleStart: "Discover Our",
-  titleHighlight: "Products.",
-  description: "Peak performance isn't accidental. It's engineered.",
+  titleStart: "A Company Built For People Who Expect",
+  titleHighlight: "Scientific Discipline.",
+  description:
+    "Innodyn was founded to bring a higher level of scientific rigor, structure, and credibility to a category that too often lacks restraint and precision.",
   buttons: [
     { label: "Explore Compounds", href: "/compounds" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "View Our Standards", href: "/standards" },
   ],
-};
+} as const;
 
 export default function StandardsPage() {
   return (
