@@ -85,6 +85,23 @@ const WHAT_WE_STAND_FOR_CONTENT = {
   cta: { label: "View Our Standards", href: "/standards" },
 };
 
+const OUR_VISION_CONTENT = {
+  headingStart: "Our",
+  headingHighlight: "Vision.",
+  paragraphs: [
+    "Our long-term vision is to redefine what customers expect from companies in this space. We believe the future belongs to brands that are more disciplined, more scientifically grounded, and more intentional in how they build trust.",
+    "Innodyn is not designed to be loud. It is designed to be respected. We are creating a company that reflects where this category should be headed: toward higher standards, stronger scientific identity, and a better-calibrated customer experience.",
+    "As we grow, our commitment remains unchanged: build a brand that earns confidence through precision, discipline, and consistency.",
+  ],
+  visual: {
+    imageSrc: "/images/our-vision-frame.png",
+    imageAlt: "Innodyn platform scheduling interface",
+    imageWidth: 800,
+    imageHeight: 600,
+  },
+  visualLeft: true,
+};
+
 const PHILOSOPHY_CONTENT = {
   headingStart: "Why Innodyn",
   headingHighlight: "Exists.",
@@ -113,8 +130,9 @@ export default function StandardsPage() {
       <section className="section-bg">
         <SplitFeature {...PHILOSOPHY_CONTENT} />
         <FeatureShowcase {...WHAT_WE_STAND_FOR_CONTENT} />
+        <SplitFeature {...OUR_VISION_CONTENT} />
+        <Footer />
       </section>
-      <Footer />
     </main>
   );
 }

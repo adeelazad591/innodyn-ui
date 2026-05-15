@@ -6,7 +6,6 @@ import ScientificStandard from "@/components/sections/ScientificStandard";
 import WhatMakesDifferent from "@/components/sections/WhatMakesDifferent";
 import SplitFeature from "@/components/sections/SplitFeature";
 import ProductExperience from "@/components/sections/ProductExperience";
-import HigherStandards from "@/components/sections/HigherStandards";
 import NextGeneration from "@/components/sections/NextGeneration";
 import FeatureShowcase from "@/components/sections/FeatureShowcase";
 
@@ -17,19 +16,71 @@ const WHY_CHOOSE_CONTENT = {
     "Innodyn appeals to people who want a more disciplined brand environment. They are not looking for an overbuilt sales pitch. They are looking for a company that feels composed, intelligent, and serious about what it offers.",
   rowOne: {
     cards: [
-      { number: "01", title: "Advanced Browsing", glow: "rgba(99,102,241,0.18)", imageSrc: "/images/frame-image-3.png", imageWidth: 673, imageHeight: 426 },
-      { number: "02", title: "Stronger Brand Discipline", glow: "rgba(139,92,246,0.12)", imageSrc: "/images/frame-image-3.png", imageWidth: 673, imageHeight: 426 },
-      { number: "03", title: "Better Product Organization", glow: "rgba(251,146,60,0.18)", imageSrc: "/images/frame-image-3.png", imageWidth: 673, imageHeight: 426 },
+      {
+        number: "01",
+        title: "Advanced Browsing",
+        glow: "rgba(99,102,241,0.18)",
+        imageSrc: "/images/frame-image-3.png",
+        imageWidth: 673,
+        imageHeight: 426,
+      },
+      {
+        number: "02",
+        title: "Stronger Brand Discipline",
+        glow: "rgba(139,92,246,0.12)",
+        imageSrc: "/images/frame-image-3.png",
+        imageWidth: 673,
+        imageHeight: 426,
+      },
+      {
+        number: "03",
+        title: "Better Product Organization",
+        glow: "rgba(251,146,60,0.18)",
+        imageSrc: "/images/frame-image-3.png",
+        imageWidth: 673,
+        imageHeight: 426,
+      },
     ],
   },
   rowTwo: {
     cards: [
-      { number: "04", title: "A Cleaner And More Sophisticated Platform", glow: "rgba(251,146,60,0.18)", imageSrc: "/images/frame-image-4.png", imageWidth: 827, imageHeight: 364 },
-      { number: "05", title: "A More Credible Overall Experience", glow: "rgba(45,212,191,0.18)", imageSrc: "/images/frame-image-4.png", imageWidth: 827, imageHeight: 364 },
+      {
+        number: "04",
+        title: "A Cleaner And More Sophisticated Platform",
+        glow: "rgba(251,146,60,0.18)",
+        imageSrc: "/images/frame-image-4.png",
+        imageWidth: 827,
+        imageHeight: 364,
+      },
+      {
+        number: "05",
+        title: "A More Credible Overall Experience",
+        glow: "rgba(45,212,191,0.18)",
+        imageSrc: "/images/frame-image-4.png",
+        imageWidth: 827,
+        imageHeight: 364,
+      },
     ],
   },
   cta: { label: "View Our Standards", href: "/standards" },
   showShapeBg: true,
+};
+
+const HIGHER_STANDARDS_CONTENT = {
+  headingStart: "Higher Standards",
+  headingHighlight: "Across the Board.",
+  paragraphs: [
+    "Innodyn is built around a simple idea: standards should be visible. Customers should feel the difference in how a company presents itself, structures its platform, and approaches quality.",
+    "We believe scientific credibility is not communicated through claims alone. It is communicated through restraint, clarity, consistency, and a refusal to cut corners. That philosophy informs how we think about sourcing, quality expectations, product selection, and the overall customer experience.",
+    "When a brand is built correctly, you can feel it in every interaction. That is the standard we aim to uphold at every level of the Innodyn platform.",
+  ],
+  visual: {
+    imageSrc: "/images/frame-image.png",
+    imageAlt: "Innodyn portal interface",
+    imageWidth: 550,
+    imageHeight: 581,
+  },
+  visualLeft: true,
 };
 
 const PHILOSOPHY_CONTENT = {
@@ -59,7 +110,7 @@ export default function Home() {
         <WhatMakesDifferent />
         <SplitFeature {...PHILOSOPHY_CONTENT} />
         <ProductExperience />
-        <HigherStandards />
+        <SplitFeature {...HIGHER_STANDARDS_CONTENT} />
         <FeatureShowcase {...WHY_CHOOSE_CONTENT} />
         <NextGeneration />
         <Footer />

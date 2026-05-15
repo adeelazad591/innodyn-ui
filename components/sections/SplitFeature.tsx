@@ -10,6 +10,9 @@ interface SplitFeatureVisual {
   /** Center image */
   imageSrc: string;
   imageAlt: string;
+  /** Intrinsic dimensions of the image — must match the actual file to avoid distortion */
+  imageWidth?: number;
+  imageHeight?: number;
   /** Optional background video. Falls back to a plain dark card if omitted. */
   videoSrc?: string;
   /** Optional left + right flanking images rendered at a smaller scale */
@@ -64,69 +67,78 @@ export default function SplitFeature({
     </div>
   );
 
+  const isSimpleImage = !visual.videoSrc && !visual.sideImages;
+
   const visualCol = (
     <div className="relative flex items-center justify-center lg:justify-end">
-      <div className="relative w-full overflow-hidden rounded-3xl border border-white/8 bg-[#0e0e0e] aspect-square">
-        {visual.videoSrc && (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src={visual.videoSrc} type="video/mp4" />
-          </video>
-        )}
-        <div
-          aria-hidden
-          className="absolute inset-0 pointer-events-none bg-black/30"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 60% 50% at 50% 85%, rgba(220,220,220,0.14) 0%, rgba(160,160,160,0.04) 50%, transparent 70%)",
-          }}
-        />
-        {visual.sideImages ? (
-          <>
-            {/* Left bottle — vertically centered, smaller, faded */}
-            <Image
-              src={visual.sideImages[0].src}
-              alt={visual.sideImages[0].alt}
-              width={220}
-              height={320}
-              className="absolute top-1/2 left-[20%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
-            />
-            {/* Center bottle — fully centered, largest, in front */}
-            <Image
-              src={visual.imageSrc}
-              alt={visual.imageAlt}
-              width={320}
-              height={420}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[65%] w-auto object-contain drop-shadow-2xl z-10"
-            />
-            {/* Right bottle — vertically centered, smaller, faded */}
-            <Image
-              src={visual.sideImages[1].src}
-              alt={visual.sideImages[1].alt}
-              width={220}
-              height={320}
-              className="absolute top-1/2 left-[80%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
-            />
-          </>
-        ) : (
+      {isSimpleImage ? (
+        // Plain image: padded container so top/left/right spacing is equal, flush at bottom
+        <div className="relative w-full overflow-hidden rounded-3xl border border-white/8 bg-[#0e0e0e] px-6 sm:px-8 lg:px-10 pt-6 sm:pt-8 lg:pt-10 flex justify-center">
           <Image
             src={visual.imageSrc}
             alt={visual.imageAlt}
-            width={320}
-            height={420}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[78%] w-auto drop-shadow-2xl object-contain"
+            width={visual.imageWidth ?? 320}
+            height={visual.imageHeight ?? 420}
+            className="w-full h-auto drop-shadow-2xl"
           />
-        )}
-      </div>
+        </div>
+      ) : (
+        // Video or sideImages: aspect-square with absolute positioning
+        <div className="relative w-full overflow-hidden rounded-3xl border border-white/8 bg-[#0e0e0e] aspect-square">
+          {visual.videoSrc && (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src={visual.videoSrc} type="video/mp4" />
+            </video>
+          )}
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none bg-black/30"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none split-feature-glow"
+          />
+          {visual.sideImages ? (
+            <>
+              <Image
+                src={visual.sideImages[0].src}
+                alt={visual.sideImages[0].alt}
+                width={220}
+                height={320}
+                className="absolute top-1/2 left-[20%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
+              />
+              <Image
+                src={visual.imageSrc}
+                alt={visual.imageAlt}
+                width={visual.imageWidth ?? 320}
+                height={visual.imageHeight ?? 420}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[65%] w-auto object-contain drop-shadow-2xl z-10"
+              />
+              <Image
+                src={visual.sideImages[1].src}
+                alt={visual.sideImages[1].alt}
+                width={220}
+                height={320}
+                className="absolute top-1/2 left-[80%] -translate-x-1/2 -translate-y-1/2 h-[47%] w-auto object-contain drop-shadow-xl opacity-50"
+              />
+            </>
+          ) : (
+            <Image
+              src={visual.imageSrc}
+              alt={visual.imageAlt}
+              width={visual.imageWidth ?? 320}
+              height={visual.imageHeight ?? 420}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[78%] w-auto object-contain drop-shadow-2xl"
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 
