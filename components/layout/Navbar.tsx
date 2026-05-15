@@ -10,7 +10,7 @@ const navLinks: { label: string; href: string }[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Standards", href: "/standards" },
-  { label: "Compounds", href: "#" },
+  { label: "Compounds", href: "/compounds" },
   { label: "How It Works", href: "#" },
 ];
 
@@ -19,9 +19,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/[0.04]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/4">
       {/* Main bar */}
-      <div className="max-w-[1680px] mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div className="max-w-420 mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
@@ -29,7 +29,7 @@ export default function Navbar() {
             alt="Innodyn"
             width={200}
             height={45}
-            className="h-8 lg:h-[45px] w-auto"
+            className="h-8 lg:h-11.25 w-auto"
             style={{ width: "auto" }}
             priority
           />

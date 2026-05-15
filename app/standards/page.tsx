@@ -1,9 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StandardsHero from "@/components/sections/StandardsHero";
-import AllProducts from "@/components/sections/AllProducts";
 import SplitFeature from "@/components/sections/SplitFeature";
-import NextGeneration from "@/components/sections/NextGeneration";
 import WhyStandardsMatter from "@/components/sections/WhyStandardsMatter";
 
 export const metadata = {

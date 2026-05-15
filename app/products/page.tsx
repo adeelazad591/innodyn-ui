@@ -4,7 +4,7 @@ import StandardsHero from "@/components/sections/StandardsHero";
 import AllProducts from "@/components/sections/AllProducts";
 
 export const metadata = {
-  title: "Standards | Innodyn",
+  title: "Products | Innodyn",
   description: "Explore our full catalog of precision compounds.",
 };
 
