@@ -94,7 +94,7 @@ export default function OurFoundation({
                     onClick={() => toggle(item.id)}
                     aria-label={item.title}
                     title={item.title}
-                    className="bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] cursor-pointer shrink-0 w-20 h-20 p-2 flex items-center justify-center rounded-2xl bg-[linear-gradient(145deg,rgba(48,48,52,0.9)_0%,rgba(20,20,22,1)_100%)] border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] overflow-hidden transition-all duration-300 hover:border-white/20"
+                    className="bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] cursor-pointer shrink-0 w-20 h-20 p-2 flex items-center justify-center rounded-2xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] overflow-hidden transition-all duration-300 hover:border-white/20"
                   >
                     <Image
                       src={item.iconSrc}
@@ -111,9 +111,7 @@ export default function OurFoundation({
                 </div>
 
                 {/* Content column */}
-                <div
-                  className="foundation-card rounded-2xl border border-white/20 flex-1 mb-4 overflow-hidden self-start relative"
-                >
+                <div className="rounded-2xl bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] border border-white/20 flex-1 mb-4 overflow-hidden self-start relative">
                   {/* Top-right grid overlay */}
                   <div className="foundation-card-grid absolute inset-0 pointer-events-none" />
                   {/* Title row — fixed height matches icon box (h-20 = 80px) */}
