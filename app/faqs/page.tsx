@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StandardsHero from "@/components/sections/StandardsHero";
+import FAQSection from "@/components/sections/FAQSection";
 
 export const metadata = {
   title: "FAQ's | Innodyn",
@@ -21,6 +22,7 @@ export default function StandardsPage() {
       <Navbar />
       <StandardsHero {...HERO_CONTENT} />
       <section className="section-bg">
+        <FAQSection />
         <Footer />
       </section>
     </main>
