@@ -10,7 +10,7 @@ interface ButtonProps {
 function ArrowIcon({ transparent }: { transparent?: boolean }) {
   return (
     <span
-      className={`flex items-center justify-center w-9 h-9 rounded-full text-base leading-none shrink-0 ${
+      className={`flex items-center justify-center w-11 h-11 rounded-full text-base leading-none shrink-0 ml-1 ${
         transparent
           ? ""
           : "bg-zinc-600/80 bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]"
@@ -36,8 +36,15 @@ function ArrowIcon({ transparent }: { transparent?: boolean }) {
   );
 }
 
-export default function Button({ label, href = "#", onClick, type, className = "", transparentIcon }: ButtonProps) {
-  const baseClass = `group inline-flex items-center gap-3 pl-6 pr-2 py-2.5 rounded-full bg-radial from-zinc-600/60 to-zinc-900/95 hover:from-zinc-600/80 hover:to-zinc-600/80 border border-white/10 text-white text-lg font-normal transition-colors ${className}`;
+export default function Button({
+  label,
+  href = "#",
+  onClick,
+  type,
+  className = "",
+  transparentIcon,
+}: ButtonProps) {
+  const baseClass = `bg-black group inline-flex items-center gap-3 pl-6 pr-2 py-2.5 rounded-full bg-radial-[at_50%_0%] from-zinc-600/80 to-zinc-900/95 hover:from-zinc-600/80 hover:to-zinc-600/80 border border-white/10 text-white text-lg font-normal transition-colors ${className}`;
 
   if (type) {
     return (
