@@ -35,7 +35,7 @@ const WHAT_WE_STAND_FOR_CONTENT = {
         description:
           "We Believe Informed Customers Should Engage With A Brand That Feels Intelligent.",
         glow: "rgba(99,102,241,0.18)",
-        imageSrc: "/images/frame-image-3.png",
+        imageSrc: "/images/frame-image-12.png",
         imageWidth: 673,
         imageHeight: 426,
       },
@@ -44,7 +44,7 @@ const WHAT_WE_STAND_FOR_CONTENT = {
         title: "Precision Over Exaggeration",
         description: "We Prioritize Measured Presentation, Exact Thinking.",
         glow: "rgba(139,92,246,0.12)",
-        imageSrc: "/images/frame-image-3.png",
+        imageSrc: "/images/frame-image-10.png",
         imageWidth: 673,
         imageHeight: 426,
       },
@@ -54,7 +54,7 @@ const WHAT_WE_STAND_FOR_CONTENT = {
         description:
           "Every Touchpoint Is Designed To Feel Organized and Clean.",
         glow: "rgba(251,146,60,0.18)",
-        imageSrc: "/images/frame-image-3.png",
+        imageSrc: "/images/frame-image-11.png",
         imageWidth: 673,
         imageHeight: 426,
       },
@@ -68,7 +68,7 @@ const WHAT_WE_STAND_FOR_CONTENT = {
         description:
           "Trust Is Built When A Company Behaves With Repeatable Standards, Dependable Systems.",
         glow: "rgba(251,146,60,0.18)",
-        imageSrc: "/images/frame-image-4.png",
+        imageSrc: "/images/frame-image-8.png",
         imageWidth: 827,
         imageHeight: 364,
       },
@@ -78,7 +78,7 @@ const WHAT_WE_STAND_FOR_CONTENT = {
         description:
           "Innodyn Is Designed To Earn Respect Through Seriousness, Technical Sophistication, And A More Disciplined Brand Environment.",
         glow: "rgba(45,212,191,0.18)",
-        imageSrc: "/images/frame-image-4.png",
+        imageSrc: "/images/frame-image-9.png",
         imageWidth: 827,
         imageHeight: 364,
       },

@@ -63,7 +63,7 @@ export default function StandardsHero({
         </p>
 
         {buttons.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
             {buttons.map((btn) => (
               <Button key={btn.label} label={btn.label} href={btn.href} />
             ))}

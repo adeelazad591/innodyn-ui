@@ -57,7 +57,7 @@ export default function Hero() {
             and quality.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3 min-[1400px]:gap-4">
+          <div className="flex flex-wrap items-center gap-3 min-[1400px]:gap-4 mt-3">
             <Button label="Explore Compounds" href="/compounds" />
             <Button label="View Our Standards" href="/standards" />
           </div>

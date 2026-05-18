@@ -20,14 +20,14 @@ function Card({
   glow: string;
 }) {
   return (
-    <div className="relative flex flex-col rounded-[1.75rem] bg-[#161618] border border-white/8 overflow-hidden">
+    <div className="relative flex flex-col h-full rounded-[1.75rem] bg-[#161618] border border-white/8 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `radial-gradient(ellipse at 50% 0%, ${glow} 0%, transparent 70%)`,
         }}
       />
-      <div className="p-8 pb-0 mb-12">
+      <div className="p-8 pb-0">
         <div className="rounded-[1.25rem] overflow-hidden">
           <Image
             src={image}
@@ -38,7 +38,7 @@ function Card({
           />
         </div>
       </div>
-      <div className="flex items-start gap-4 px-4 py-4 mt-3 mx-3 mb-3 rounded-2xl bg-[linear-gradient(180deg,rgba(48,48,52,0.6)_0%,rgba(22,22,24,0.9)_100%)] border border-white/8">
+      <div className="flex items-start gap-4 px-4 py-4 mt-auto mx-3 mb-3 rounded-2xl bg-[linear-gradient(180deg,rgba(48,48,52,0.6)_0%,rgba(22,22,24,0.9)_100%)] border border-white/8">
         <span className="inline-flex items-center justify-center w-12 h-9 shrink-0 rounded-[70px] bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] border border-white/12 text-sm font-normal text-white/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]">
           {number}
         </span>
