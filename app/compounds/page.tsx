@@ -49,7 +49,7 @@ const MORE_STRUCTURED = {
   ],
   cta: { label: "Contact Us", href: "/contact" },
   visual: {
-    videoSrc: "/videos/portal.mp4",
+    videoSrc: "/videos/arc.mp4",
     imageSrc: "/images/products/product-2.png",
     imageAlt: "Innodyn 2X Blend product vial",
   },

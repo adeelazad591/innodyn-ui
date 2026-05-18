@@ -32,10 +32,11 @@ const HOW_IT_WORKS_CONTENT = {
         title: "Explore the Catalog",
         description:
           "Customers begin by browsing a catalog designed for clean navigation and structured discovery. ",
-        glow: "rgba(99,102,241,0.18)",
-        imageSrc: "/images/frame-image-3.png",
+        glow: "",
+        imageSrc: "/images/hiw-frame-1.png",
         imageWidth: 673,
         imageHeight: 426,
+        bgImageSrc: "/images/hiw-frame-1-bg.png",
       },
       {
         number: "02",
@@ -43,7 +44,7 @@ const HOW_IT_WORKS_CONTENT = {
         description:
           "Each product is positioned within a presentation framework built for clarity. ",
         glow: "rgba(251,146,60,0.18)",
-        imageSrc: "/images/frame-image-3.png",
+        imageSrc: "/images/hiw-frame-2.png",
         imageWidth: 673,
         imageHeight: 426,
       },
@@ -57,7 +58,7 @@ const HOW_IT_WORKS_CONTENT = {
         description:
           "Once selections are made, customers move into a simplified process designed to reduce complexity.",
         glow: "rgba(251,146,60,0.18)",
-        imageSrc: "/images/frame-image-4.png",
+        imageSrc: "/images/hiw-frame-3.png",
         imageWidth: 827,
         imageHeight: 364,
       },
@@ -66,8 +67,8 @@ const HOW_IT_WORKS_CONTENT = {
         title: "Experience the Innodyn Standard",
         description:
           "From beginning to end, the customer journey is designed to reflect the Innodyn standard: precision & clarity.",
-        glow: "rgba(45,212,191,0.18)",
-        imageSrc: "/images/frame-image-4.png",
+        glow: "",
+        imageSrc: "/images/hiw-frame-4.png",
         imageWidth: 827,
         imageHeight: 364,
       },

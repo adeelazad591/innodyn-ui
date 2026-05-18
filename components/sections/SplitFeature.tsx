@@ -93,12 +93,21 @@ export default function SplitFeature({
                 : undefined
             }
           >
+            {visual.layerSrc && (
+              <Image
+                src={visual.layerSrc}
+                alt=""
+                aria-hidden
+                fill
+                className="object-cover opacity-60 pointer-events-none select-none"
+              />
+            )}
             <Image
               src={visual.imageSrc}
               alt={visual.imageAlt}
               width={visual.imageWidth ?? 320}
               height={visual.imageHeight ?? 420}
-              className="w-full h-auto drop-shadow-2xl"
+              className="relative w-full h-auto drop-shadow-2xl"
             />
           </div>
         ) : (

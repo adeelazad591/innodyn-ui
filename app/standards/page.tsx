@@ -33,6 +33,7 @@ const OUR_STANDARDS_CONTENT = {
   visual: {
     imageSrc: "/images/mobile-image.png",
     imageAlt: "Innodyn app",
+    layerSrc: "/images/layer-shape.png",
     backgroundGradient:
       "radial-gradient(ellipse at 60% 40%, rgba(221,214,254,0.22) 0%, transparent 70%), radial-gradient(ellipse at 10% 85%, rgba(187,247,208,0.20) 0%, transparent 60%)",
   },

@@ -11,6 +11,20 @@ export default function NextGeneration() {
           className="absolute inset-0 pointer-events-none overflow-hidden rounded-[2.5rem] card-perspective-grid"
         />
 
+        {/* Circle shape background — right side decoration */}
+        <div
+          aria-hidden
+          className="absolute top-0 -right-100 w-200 h-200 pointer-events-none select-none z-0"
+        >
+          <Image
+            src="/images/circle-shape.png"
+            alt=""
+            fill
+            sizes="480px"
+            className="object-contain opacity-40"
+          />
+        </div>
+
         <div className="relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left — text content */}

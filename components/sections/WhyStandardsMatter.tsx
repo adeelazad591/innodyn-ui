@@ -4,12 +4,28 @@ import Button from "@/components/ui/Button";
 export default function WhyStandardsMatter() {
   return (
     <section className="py-10 lg:py-0 px-2 md:px-10 lg:px-30">
+      {/* Gradient border wrapper — fades to transparent at bottom */}
+      <div className="rounded-[2.5rem] p-px bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.04)_55%,transparent_100%)]">
       {/* Outer luxury container — same card as ProductExperience */}
-      <div className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] border border-white/[0.07] overflow-hidden px-8 pt-14 pb-8 sm:px-12 sm:pt-16 sm:pb-10 lg:px-16 lg:pt-0 lg:pb-12 xl:pb-0">
+      <div className="relative rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)] overflow-hidden px-8 pt-14 pb-8 sm:px-12 sm:pt-16 sm:pb-10 lg:px-16 lg:pt-0 lg:pb-12 xl:pb-0">
         <div
           aria-hidden
           className="absolute inset-0 pointer-events-none overflow-hidden rounded-[2.5rem] card-perspective-grid"
         />
+
+        {/* Circle shape background — right side decoration */}
+        <div
+          aria-hidden
+          className="absolute top-0 -right-100 w-200 h-200 pointer-events-none select-none z-0"
+        >
+          <Image
+            src="/images/circle-shape.png"
+            alt=""
+            fill
+            sizes="480px"
+            className="object-contain opacity-40"
+          />
+        </div>
 
         <div className="relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -55,6 +71,7 @@ export default function WhyStandardsMatter() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

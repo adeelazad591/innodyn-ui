@@ -10,6 +10,8 @@ function Card({
   imageWidth,
   imageHeight,
   glow,
+  bgImage,
+  imageClassName,
 }: {
   number: string;
   title: string;
@@ -18,17 +20,27 @@ function Card({
   imageWidth: number;
   imageHeight: number;
   glow: string;
+  bgImage?: string;
+  imageClassName?: string;
 }) {
   return (
     <div className="relative flex flex-col h-full rounded-[1.75rem] bg-[#161618] border border-white/8 overflow-hidden">
+      {bgImage && (
+        <Image
+          src={bgImage}
+          alt=""
+          fill
+          className="object-contain object-center pointer-events-none select-none"
+        />
+      )}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `radial-gradient(ellipse at 50% 0%, ${glow} 0%, transparent 70%)`,
         }}
       />
-      <div className="p-8 pb-0">
-        <div className="rounded-[1.25rem] overflow-hidden">
+      <div className={`relative ${imageClassName ?? "px-8 pb-0"}`}>
+        <div className="overflow-hidden">
           <Image
             src={image}
             alt={title}
@@ -38,7 +50,7 @@ function Card({
           />
         </div>
       </div>
-      <div className="flex items-start gap-4 px-4 py-4 mt-auto mx-3 mb-3 rounded-2xl bg-[linear-gradient(180deg,rgba(48,48,52,0.6)_0%,rgba(22,22,24,0.9)_100%)] border border-white/8">
+      <div className="relative flex items-start gap-4 px-4 py-4 mt-auto mx-3 mb-3 rounded-2xl bg-[linear-gradient(180deg,rgba(48,48,52,0.6)_0%,rgba(22,22,24,0.9)_100%)] border border-white/8">
         <span className="inline-flex items-center justify-center w-12 h-9 shrink-0 rounded-[70px] bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] border border-white/12 text-sm font-normal text-white/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]">
           {number}
         </span>
@@ -47,7 +59,7 @@ function Card({
             {title}
           </span>
           {description && (
-            <span className="text-sm font-normal text-zinc-400 leading-snug">
+            <span className="text-sm md:text-base font-normal text-zinc-400 leading-snug">
               {description}
             </span>
           )}
@@ -68,7 +80,9 @@ export default function FeatureShowcase({
   showGradientBg = true,
 }: FeatureShowcaseProps) {
   return (
-    <section className={`relative isolate py-20 lg:py-28 overflow-hidden ${showGradientBg ? "bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]" : ""}`}>
+    <section
+      className={`relative isolate py-20 lg:py-28 overflow-hidden ${showGradientBg ? "bg-[linear-gradient(180deg,rgba(52,52,52,0.72)_0%,rgba(24,24,24,0.96)_42%,#111111_100%)]" : ""}`}
+    >
       {showShapeBg && (
         <Image
           src="/images/shape-bg.png"
@@ -108,7 +122,9 @@ export default function FeatureShowcase({
         </div>
 
         {/* Row 1 */}
-        <div className={`grid grid-cols-1 sm:grid-cols-2 ${rowOne.cards.length >= 3 ? "lg:grid-cols-3" : ""} gap-4 mb-4`}>
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 ${rowOne.cards.length >= 3 ? "lg:grid-cols-3" : ""} gap-4 mb-4`}
+        >
           {rowOne.cards.map((card) => (
             <Card
               key={card.number}
@@ -119,6 +135,8 @@ export default function FeatureShowcase({
               imageWidth={card.imageWidth}
               imageHeight={card.imageHeight}
               glow={card.glow}
+              bgImage={card.bgImageSrc}
+              imageClassName={card.imageClassName}
             />
           ))}
         </div>
@@ -135,6 +153,8 @@ export default function FeatureShowcase({
               imageWidth={card.imageWidth}
               imageHeight={card.imageHeight}
               glow={card.glow}
+              bgImage={card.bgImageSrc}
+              imageClassName={card.imageClassName}
             />
           ))}
         </div>

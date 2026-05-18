@@ -15,6 +15,8 @@ interface ShowcaseCard {
   imageSrc: string;
   imageWidth: number;
   imageHeight: number;
+  bgImageSrc?: string;
+  imageClassName?: string;
 }
 
 interface ShowcaseRow {
@@ -82,6 +84,8 @@ export interface SplitFeatureVisual {
   backgroundLayers?: BackgroundLayer[];
   /** When true, the card background is transparent instead of the default dark */
   transparent?: boolean;
+  /** Optional decorative layer image rendered behind the main visual */
+  layerSrc?: string;
 }
 
 export interface SplitFeatureProps {
