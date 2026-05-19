@@ -111,7 +111,7 @@ export default function KeyProducts() {
             </h2>
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl font-normal text-zinc-400 leading-[1.7] sm:leading-[1.8] max-w-full lg:max-w-155">
+          <p className="text-base sm:text-lg md:text-xl font-normal text-[#A3A3A3] leading-[1.7] sm:leading-[1.8] max-w-full lg:max-w-155">
             Innodyn was created for a more discerning customer. Not for impulse
             buyers. Not for trend chasers. For individuals who want a platform
             that feels methodical, credible, and engineered with care.
@@ -127,7 +127,7 @@ export default function KeyProducts() {
 
         {/* View all products CTA */}
         <div className="flex justify-center mt-12">
-          <Button label="View All Products" href="/products" />
+          <Button label="View All Products" href="/products" variant="light" />
         </div>
       </div>
     </section>

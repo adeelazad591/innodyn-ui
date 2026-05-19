@@ -19,9 +19,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/4">
+    <nav className="fixed top-0 left-0 right-0 z-50  px-6 lg:px-8 py-3 ">
       {/* Main bar */}
-      <div className="max-w-420 mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div className="  flex  items-center justify-between">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
@@ -36,26 +36,36 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop — centered nav links */}
-        <ul className="hidden min-[1400px]:flex items-center gap-1 bg-[#1a1a1a] py-4 px-4 rounded-full border border-white/5">
+        <ul className="hidden min-[1400px]:flex  items-center gap-1.75 backdrop-blur-[20px]  bg-white/4 p-2 rounded-full ">
           {navLinks.map(({ label, href }) => (
             <li key={label}>
               <Link
                 href={href}
-                className={`px-6 py-3 rounded-full text-lg font-medium transition-colors ${
+                className={`relative isolate inline-flex items-center justify-center overflow-hidden px-4 py-3 rounded-full text-lg font-medium transition-colors ${
                   pathname === href
-                    ? "bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] text-white border border-white/10 shadow-inner"
-                    : "text-zinc-300 hover:text-white"
+                    ? "text-white border border-white/6 bg-white/1 before:absolute backdrop-blur-[10px] before:inset-x-0 before:top-0 before:h-[80%] before:-z-10 before:rounded-full before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.22] before:to-transparent before:content-['']"
+                    : "text-white hover:text-white"
+                }`}
+              >
+                <span className="relative z-10 whitespace-nowrap">{label}</span>
+              </Link>
+              {/* <Link
+                href={href}
+                className={`px-4 py-3 rounded-full text-lg font-medium transition-colors ${
+                  pathname === href
+                    ? "bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] text-white border border-white/6 shadow-inner"
+                    : "text-white hover:text-white"
                 }`}
               >
                 {label}
-              </Link>
+              </Link> */}
             </li>
           ))}
         </ul>
 
         {/* Desktop — CTA */}
         <div className="hidden min-[1400px]:flex justify-end min-w-40">
-          <Button label="View Our Standards" href="/standards" />
+          <Button label="View Our Standards" href="/standards" isHeader />
         </div>
 
         {/* Mobile / tablet — burger */}

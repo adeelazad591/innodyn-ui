@@ -16,7 +16,7 @@ export default function ScientificStandard() {
             </h2>
           </div>
 
-          <p className="text-xl font-normal text-zinc-400 leading-[1.8] lg:max-w-152 lg:pt-2">
+          <p className="text-xl font-normal text-neutral-400 leading-[1.8] lg:max-w-152 lg:pt-2">
             Innodyn was created for a more discerning customer. Not for impulse
             buyers. Not for trend chasers. For individuals who want a platform
             that feels methodical, credible, and engineered with care.
@@ -26,7 +26,7 @@ export default function ScientificStandard() {
         {/* Content — body text left, device image right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="flex flex-col gap-6">
-            <p className="text-lg font-normal text-zinc-400 leading-[1.8]">
+            <p className="text-lg font-normal text-neutral-400 leading-[1.8]">
               Every part of the Innodyn experience is designed to reflect a
               disciplined philosophy: cleaner systems, stronger standards,
               tighter sourcing expectations, and a sharper focus on scientific
@@ -34,12 +34,12 @@ export default function ScientificStandard() {
               simple: create an environment that feels elevated, precise, and
               grounded in substance.
             </p>
-            <p className="text-lg font-normal text-zinc-400 leading-[1.8]">
+            <p className="text-lg font-normal text-neutral-400 leading-[1.8]">
               This is not lifestyle branding dressed up as science. This is a
               science-forward brand built for people who expect more.
             </p>
             <div>
-              <Button label="Explore Compounds" href="/compounds" />
+              <Button label="Explore Compounds" href="/compounds" variant="light" />
             </div>
           </div>
 

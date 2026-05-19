@@ -25,7 +25,7 @@ export default function SplitFeature({
 }: SplitFeatureProps) {
   const textCol = (
     <div className="flex flex-col gap-8 lg:gap-10">
-      <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold text-white leading-[1.1] tracking-tight">
+      <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[54px] font-extrabold text-white leading-[1.1] tracking-tight">
         {headingHighlightNewLine ? (
           <>
             <span className="block">{headingStart}</span>
@@ -47,7 +47,7 @@ export default function SplitFeature({
         {paragraphs.map((text, i) => (
           <p
             key={i}
-            className="text-lg font-normal text-zinc-400 leading-[1.8]"
+            className="text-lg font-normal text-[#A3A3A3] leading-[1.8]"
           >
             {text}
           </p>
@@ -56,7 +56,7 @@ export default function SplitFeature({
 
       {cta && (
         <div>
-          <Button label={cta.label} href={cta.href} />
+          <Button label={cta.label} href={cta.href} variant="light"/>
         </div>
       )}
     </div>
@@ -107,7 +107,7 @@ export default function SplitFeature({
               alt={visual.imageAlt}
               width={visual.imageWidth ?? 320}
               height={visual.imageHeight ?? 420}
-              className="relative w-full h-auto drop-shadow-2xl"
+              className="relative w-full h-auto shadow-[0_4px_78px_0_rgba(94,88,88,0.21)]"
             />
           </div>
         ) : (
@@ -197,7 +197,7 @@ export default function SplitFeature({
             <p className="text-sm font-semibold text-white text-center leading-tight">
               {card.title}
             </p>
-            <p className="text-xs text-zinc-400 text-center">{card.subtitle}</p>
+            <p className="text-xs text-neutral-400 text-center">{card.subtitle}</p>
           </div>
         ))}
       </div>

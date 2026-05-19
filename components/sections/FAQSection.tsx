@@ -90,7 +90,7 @@ export default function FAQSection() {
             Questions.
           </span>
         </h2>
-        <p className="text-base sm:text-xl font-normal text-zinc-400 leading-[1.8] max-w-2xl mx-auto">
+        <p className="text-base sm:text-xl font-normal text-neutral-400 leading-[1.8] max-w-2xl mx-auto">
           Clear answers to help you better understand Innodyn, our standards,
           and the philosophy behind the platform.
         </p>
@@ -105,12 +105,17 @@ export default function FAQSection() {
                 key={faq.id}
                 onClick={() => setActiveIndex(index)}
                 className={[
-                  "relative overflow-hidden rounded-4xl px-10 py-10 cursor-pointer select-none bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]",
-                  "transition-all duration-200",
-                  isActive
-                    ? "bg-[#1d1d1f] border border-zinc-600/45"
-                    : "border border-white/4 opacity-55",
-                ].join(" ")}
+  "relative isolate overflow-hidden rounded-4xl px-10 py-10 cursor-pointer select-none border bg-white/[0.01] backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-[80%] before:-z-10 before:rounded-4xl before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.22] before:to-transparent before:content-['']",
+  "transition-all duration-200",
+  isActive ? "border-white/6 opacity-100" : "border-white/4 opacity-55",
+].join(" ")}
+                // className={[
+                //   "relative overflow-hidden rounded-4xl px-10 py-10 cursor-pointer select-none bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]",
+                //   "transition-all duration-200",
+                //   isActive
+                //     ? "bg-[#1d1d1f] border border-zinc-600/45"
+                //     : "border border-white/4 opacity-55",
+                // ].join(" ")}
               >
                 <CardGridOverlay />
 

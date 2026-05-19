@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import { ElipseBlur } from "@/public/icons";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-1 min-h-screen items-center overflow-hidden">
+    <section className="relative flex  flex-1 min-h-screen items-center overflow-hidden">
       {/* Background video */}
       <video
         aria-hidden
@@ -11,11 +12,13 @@ export default function Hero() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        // className="absolute inset-0 w-full scale-110 h-full object-cover pointer-events-none"
+        className="absolute -inset-x-[150px] -inset-y-[100px] scale-110 w-auto h-auto min-w-[calc(100%+300px)] min-h-[calc(100%+200px)] object-cover pointer-events-none"
       >
         <source src="/videos/tunnel.mp4" type="video/mp4" />
       </video>
-
+      <div className=" absolute right-100 top-120 w-69.5 h-69.5 bg-white/50  blur-[100px]  rounded-full">
+      </div>
       {/* Dark overlay to tone down the video */}
       <div
         aria-hidden
@@ -49,7 +52,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl font-normal leading-relaxed min-[1400px]:leading-[1.75] text-zinc-400 max-w-xl lg:max-w-2xl min-[1400px]:max-w-none">
+          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl font-normal leading-relaxed min-[1400px]:leading-[1.75] text-[#A3A3A3] max-w-xl lg:max-w-2xl min-[1400px]:max-w-none">
             Built for people who demand more than marketing. Innodyn is a
             science-first platform focused on advanced compounds, rigorous
             sourcing standards, and a research-minded customer experience
@@ -58,14 +61,14 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 min-[1400px]:gap-4 mt-3">
-            <Button label="Explore Compounds" href="/compounds" />
-            <Button label="View Our Standards" href="/standards" />
+            <Button label="Explore Compounds" href="/compounds" variant="light" />
+            <Button label="View Our Standards" href="/standards" variant="light" />
           </div>
         </div>
       </div>
 
       {/* Hero image — wide desktop only */}
-      <div className="animate-float  hidden min-[1400px]:flex absolute right-0 top-0 bottom-0 items-center z-10 pointer-events-none">
+      <div className="animate-float  hidden min-[1400px]:flex absolute -right-13 top-0 bottom-0 items-center z-10 pointer-events-none">
         <Image
           src="/images/hero-object.png"
           alt="Abstract chrome 3D object"

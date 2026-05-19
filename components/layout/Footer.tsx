@@ -105,18 +105,19 @@ export default function Footer() {
                 height={160}
                 className="h-40 w-50"
               />
-              <p className="text-base md:text-lg font-normal text-zinc-400 leading-[1.75]">
+              <p className="text-base md:text-lg font-normal text-gray-400 leading-[1.75]">
                 A science-first platform built around precision, disciplined
                 presentation, and a more refined standard for informed
                 customers.
               </p>
               {/* Email subscribe */}
               <div className="flex items-center gap-4 w-full max-w-180">
-                <div className="flex-1 h-16 rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_top,rgba(80,80,84,0.45)_0%,rgba(12,12,14,1)_75%)] backdrop-blur-xl overflow-hidden">
+                <div className="relative isolate flex-1 h-16 rounded-2xl overflow-hidden border border-white/6 bg-white/[0.01] backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-[80%] before:-z-10 before:rounded-2xl before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.22] before:to-transparent before:content-['']">
+                {/* <div className="flex-1 h-16 rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_top,rgba(80,80,84,0.45)_0%,rgba(12,12,14,1)_75%)] backdrop-blur-xl overflow-hidden"> */}
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full h-full bg-transparent px-7 text-white placeholder:text-zinc-400 text-[20px] font-medium outline-none"
+                    className="w-full h-full bg-transparent px-7 text-white placeholder:text-neutral-400 text-[20px] font-medium outline-none"
                   />
                 </div>
 
@@ -142,7 +143,7 @@ export default function Footer() {
                       <li key={link.label}>
                         <a
                           href={link.href}
-                          className="text-zinc-400 hover:text-white transition-colors text-base md:text-lg"
+                          className="text-neutral-400 hover:text-white transition-colors text-base md:text-lg"
                         >
                           {link.label}
                         </a>
@@ -159,7 +160,7 @@ export default function Footer() {
 
           {/* Bottom bar */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p className="text-zinc-400 text-sm md:text-lg">
+            <p className="text-neutral-400 text-sm md:text-lg">
               © 2024 All Rights Reserved Innodyn .
             </p>
             <div className="flex items-center gap-3">

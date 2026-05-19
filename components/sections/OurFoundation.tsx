@@ -59,12 +59,12 @@ export default function OurFoundation({
             </span>
           </h2>
           <div className="shrink-0 sm:pt-2">
-            <Button label={cta.label} href={cta.href} />
+            <Button label={cta.label} href={cta.href} variant="light" />
           </div>
         </div>
 
         {/* ── Paragraph ── */}
-        <p className="text-base sm:text-lg font-normal text-zinc-400 leading-[1.8] max-w-4xl mb-12 lg:mb-16">
+        <p className="text-base sm:text-lg font-normal text-neutral-400 leading-[1.8] max-w-4xl mb-12 lg:mb-16">
           From the beginning, Innodyn was built around the belief that informed
           customers deserve a better experience. They deserve a platform that
           feels measured rather than inflated, structured rather than chaotic,
@@ -103,7 +103,8 @@ export default function OurFoundation({
                 </div>
 
                 {/* Content column */}
-                <div className="rounded-2xl bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] border border-white/20 flex-1 mb-4 overflow-hidden self-start relative">
+                <div className="relative isolate rounded-2xl border border-white/6 bg-white/[0.01] backdrop-blur-[10px] flex-1 mb-4 overflow-hidden self-start before:absolute before:inset-x-0 before:top-0 before:h-[80%] before:-z-10 before:rounded-2xl before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.22] before:to-transparent before:content-['']">
+                {/* <div className="rounded-2xl bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)] border border-white/20 flex-1 mb-4 overflow-hidden self-start relative"> */}
                   {/* Top-right grid overlay */}
                   <div className="foundation-card-grid absolute inset-0 pointer-events-none" />
                   {/* Title row — fixed height matches icon box (h-20 = 80px) */}
@@ -131,7 +132,7 @@ export default function OurFoundation({
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-base sm:text-[22px] font-normal text-zinc-400 leading-[1.8] px-10 pb-5">
+                      <p className="text-base sm:text-[22px] font-normal text-neutral-400 leading-[1.8] px-10 pb-5">
                         {item.description}
                       </p>
                     </div>

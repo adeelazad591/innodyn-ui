@@ -108,7 +108,7 @@ export default function WhyChoose() {
               Innodyn.
             </span>
           </h2>
-          <p className="text-base sm:text-xl font-normal text-zinc-400 leading-[1.8] max-w-4xl mx-auto px-2">
+          <p className="text-base sm:text-xl font-normal text-neutral-400 leading-[1.8] max-w-4xl mx-auto px-2">
             Innodyn appeals to people who want a more disciplined brand
             environment. They are not looking for an overbuilt sales pitch. They
             are looking for a company that feels composed, intelligent, and

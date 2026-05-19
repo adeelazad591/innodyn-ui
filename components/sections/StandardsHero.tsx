@@ -9,7 +9,7 @@ export default function StandardsHero({
   buttons = [],
 }: StandardsHeroProps) {
   return (
-    <section className="relative flex items-center justify-center min-h-[65vh] overflow-hidden">
+    <section className="relative flex items-center  w-full justify-center min-h-[65vh] overflow-hidden">
       {/* Background video */}
       <video
         aria-hidden
@@ -18,7 +18,8 @@ export default function StandardsHero({
         loop
         playsInline
         preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className="absolute -inset-x-[250px] -inset-y-[100px] scale-110 w-auto h-auto min-w-[calc(100%+500px)] min-h-[calc(100%+200px)] object-cover pointer-events-none"
+        // className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       >
         <source src="/videos/tunnel.mp4" type="video/mp4" />
       </video>
@@ -58,14 +59,14 @@ export default function StandardsHero({
           )}
         </h1>
 
-        <p className="max-w-xl lg:max-w-4xl text-base font-normal leading-relaxed text-zinc-400 sm:text-lg lg:text-xl xl:text-2xl">
+        <p className="max-w-xl lg:max-w-4xl text-base font-normal leading-relaxed text-neutral-400 sm:text-lg lg:text-xl xl:text-2xl">
           {description}
         </p>
 
         {buttons.length > 0 && (
           <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
             {buttons.map((btn) => (
-              <Button key={btn.label} label={btn.label} href={btn.href} />
+              <Button key={btn.label} label={btn.label} href={btn.href} variant="light" />
             ))}
           </div>
         )}

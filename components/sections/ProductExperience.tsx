@@ -116,7 +116,7 @@ export default function ProductExperience() {
         <div className="relative z-10">
           {/* Badge */}
           <div className="flex justify-center mb-8">
-            <span className="shadow-[0_14px_44px_rgba(0,0,0,0.45)] backdrop-blur-md inline-flex items-center px-5 py-2 rounded-2xl bg-[#1e1e20] border-2 border-white/20 text-zinc-400 text-sm md:text-lg font-base tracking-wide bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]">
+            <span className="shadow-[0_14px_44px_rgba(0,0,0,0.45)] backdrop-blur-md inline-flex items-center px-5 py-2 rounded-2xl bg-[#1e1e20] border-2 border-white/6 text-white text-sm md:text-lg font-base tracking-wide bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]">
               Interface Architecture
             </span>
           </div>
@@ -146,7 +146,7 @@ export default function ProductExperience() {
           </div>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-xl font-normal text-zinc-400 leading-[1.8] max-w-5xl px-0 lg:px-6 mx-auto mb-10 text-center">
+          <p className="text-base sm:text-xl font-normal text-neutral-400 leading-[1.8] max-w-5xl px-0 lg:px-6 mx-auto mb-10 text-center">
             A cleaner, more intelligent way to explore compounds.
           </p>
 
@@ -193,7 +193,8 @@ export default function ProductExperience() {
                       <button
                         type="button"
                         aria-label={`Explore ${card.title}`}
-                        className="absolute top-5 right-5 w-9 h-9 rounded-full bg-zinc-600/55 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-zinc-500/65 transition-colors duration-200"
+                        className="absolute top-5 right-5 w-12 h-12 rounded-full overflow-hidden border border-white/6 bg-white/[0.11] backdrop-blur-[12px] flex items-center justify-center text-white/80 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-full before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.11] before:to-transparent before:content-['']"
+                        // className="absolute top-5 right-5 w-9 h-9 rounded-full bg-zinc-600/55 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-zinc-500/65 transition-colors duration-200"
                       >
                         <ArrowIcon className="-rotate-45" />
                       </button>
@@ -214,7 +215,7 @@ export default function ProductExperience() {
                     <h3
                       className={[
                         "text-lg md:text-2xl font-semibold mb-4 leading-snug relative z-10 transition-colors duration-300",
-                        isActive ? "text-white" : "text-zinc-400",
+                        isActive ? "text-white" : "text-white",
                       ].join(" ")}
                     >
                       {card.title}
@@ -225,8 +226,8 @@ export default function ProductExperience() {
                       className={[
                         "text-sm leading-[1.75] relative z-10 transition-colors duration-300",
                         isActive
-                          ? "text-zinc-300"
-                          : "text-zinc-500 line-clamp-3",
+                          ? "text-neutral-300"
+                          : "text-neutral-500 line-clamp-3",
                       ].join(" ")}
                     >
                       {card.description}
@@ -294,7 +295,7 @@ export default function ProductExperience() {
                     <h3
                       className={[
                         "text-lg font-semibold mb-3 relative z-10",
-                        isActive ? "text-white" : "text-zinc-400",
+                        isActive ? "text-white" : "text-neutral-400",
                       ].join(" ")}
                     >
                       {card.title}

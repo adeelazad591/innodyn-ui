@@ -38,12 +38,19 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* Tags — gradient pill badges */}
         <div className="flex flex-wrap gap-2">
           {product.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-#A3A3A3 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/10 bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]"
-            >
-              {tag}
-            </span>
+          <span
+  key={tag}
+  className="relative isolate overflow-hidden px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-neutral-400 border border-white/6 bg-white/[0.01] backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-[80%] before:-z-10 before:rounded-full before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.22] before:to-transparent before:content-['']"
+>
+  <span className="relative z-10">{tag}</span>
+</span>
+            // <span
+            //   key={tag}
+            //  className="relative overflow-hidden px-3.5 py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-neutral-400 border border-white/6 bg-white/[0.01] before:absolute before:inset-x-0 before:top-0 before:h-[70%] before:rounded-t-full before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.12] before:to-transparent before:content-['']"
+            //   className="px-3.5 text-neutral-400  py-1.25 rounded-full text-[14px] leading-5 font-medium font-poppins text-#A3A3A3 bg-radial from-zinc-600/20 to-zinc-900/60 border border-white/6 bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]"
+            // >
+            //   {tag}
+            // </span>
           ))}
         </div>
 
@@ -51,7 +58,9 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center gap-5 mt-1">
           <button
             type="button"
-            className="group cursor-pointer flex flex-1 items-center justify-center gap-2.5 py-3.5 rounded-full text-lg font-medium text-white bg-radial from-[#5a5a5a]/75 via-[#282828]/90 to-[#0c0c0e] hover:bg-black hover:bg-none border border-white/10 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)] transition-all duration-300"
+             className="group relative isolate overflow-hidden cursor-pointer flex flex-1 items-center justify-center gap-2.5 py-3.5 rounded-full text-lg font-medium text-white border border-white/6 bg-white/[0.01] backdrop-blur-[10px] transition-all duration-300 before:absolute before:inset-x-0 before:top-0 before:h-[80%] before:-z-10 before:rounded-full before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.22] before:to-transparent before:content-['']"
+            // className="group relative overflow-hidden cursor-pointer flex flex-1 items-center justify-center gap-2.5 py-3.5 rounded-full text-lg font-medium text-white border border-white/6 bg-black/[0.24] backdrop-blur-[20px] transition-all duration-300 before:absolute before:inset-x-0 before:top-0 before:h-[65%] before:rounded-t-full before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.22] before:to-transparent before:content-['']"
+            // className="group cursor-pointer flex flex-1 items-center justify-center gap-2.5 py-3.5 rounded-full text-lg font-medium text-white bg-radial from-[#5a5a5a]/75 via-[#282828]/90 to-[#0c0c0e] hover:bg-black hover:bg-none border border-white/10 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)] transition-all duration-300"
           >
             <svg
               width="14"

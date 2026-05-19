@@ -40,13 +40,13 @@ export default function WhyStandardsMatter() {
               </h2>
 
               {/* Body */}
-              <p className="text-base sm:text-lg font-normal text-zinc-400 leading-[1.8]">
+              <p className="text-base sm:text-lg font-normal text-neutral-400 leading-[1.8]">
                 In a market saturated with overstatement and inconsistency,
                 standards are what distinguish serious organizations from
                 everyone else.
               </p>
 
-              <p className="text-base sm:text-lg font-normal text-zinc-400 leading-[1.8] mb-5">
+              <p className="text-base sm:text-lg font-normal text-neutral-400 leading-[1.8] mb-5">
                 Customers who choose Innodyn are often highly informed. They
                 understand that quality is reflected not only in what a company
                 offers, but in how it operates. They value disciplined

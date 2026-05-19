@@ -185,7 +185,7 @@ function StackedCards() {
               >
                 {c.icon}
               </div>
-              <span className="flex-1 text-lg sm:text-2xl font-medium text-white leading-snug">
+              <span className="flex-1 text-lg sm:text-2xl font-medium text-gray-300 leading-snug">
                 {c.text}
               </span>
               <button
@@ -221,6 +221,10 @@ export default function WhatMakesDifferent() {
   return (
     <section className="relative py-12 lg:py-20 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-0">
+
+        <div className="h-20 w-20 bg-white/50 rounded-full absolute blur-[80px] left-155 top-30">
+
+        </div>
         {/* Centered heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-[1.75rem] sm:text-[2.5rem] lg:text-[3.25rem] xl:text-[60px] font-extrabold leading-tight tracking-tight mb-6">
@@ -232,7 +236,7 @@ export default function WhatMakesDifferent() {
               Different.
             </span>
           </h2>
-          <p className="text-base sm:text-xl font-normal text-zinc-400 leading-[1.8] max-w-5xl px-0 lg:px-6 mx-auto">
+          <p className="text-base sm:text-xl font-normal text-neutral-400 leading-[1.8] max-w-5xl px-0 lg:px-6 mx-auto">
             At Innodyn, the foundation is not aesthetics alone. It is process.
             We believe trust is earned through rigor, not noise. That is why we
             focus on the variables that actually matter: sourcing discipline,

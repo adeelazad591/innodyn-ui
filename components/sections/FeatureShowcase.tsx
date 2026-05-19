@@ -59,7 +59,7 @@ function Card({
             {title}
           </span>
           {description && (
-            <span className="text-sm md:text-base font-normal text-zinc-400 leading-snug">
+            <span className="text-sm md:text-base font-normal text-neutral-400 leading-snug">
               {description}
             </span>
           )}
@@ -116,7 +116,7 @@ export default function FeatureShowcase({
               {headingHighlight}
             </span>
           </h2>
-          <p className="text-base sm:text-xl font-normal text-zinc-400 leading-[1.8] max-w-4xl mx-auto px-2">
+          <p className="text-base sm:text-xl font-normal text-neutral-400 leading-[1.8] max-w-4xl mx-auto px-2">
             {description}
           </p>
         </div>
@@ -162,7 +162,7 @@ export default function FeatureShowcase({
         {/* CTA */}
         {cta && (
           <div className="flex justify-center mt-14">
-            <Button label={cta.label} href={cta.href} />
+            <Button label={cta.label} href={cta.href} variant="light"/>
           </div>
         )}
       </div>

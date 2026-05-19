@@ -31,9 +31,16 @@ export default function NextGeneration() {
             <div className="flex flex-col gap-7 order-1">
               {/* Badge */}
               {/* <span className="inline-flex w-fit items-center px-4 py-1.5 rounded-full border border-white/15 bg-white/5 text-sm font-normal text-white/80 tracking-wide"></span> */}
-              <span className="w-fit shadow-[0_14px_44px_rgba(0,0,0,0.45)] backdrop-blur-md inline-flex items-center px-5 py-2 rounded-2xl bg-[#1e1e20] border-2 border-white/20 text-zinc-400 text-sm md:text-lg font-base tracking-wide bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]">
+              
+              <div className="relative overflow-hidden w-fit shadow-[0_14px_44px_rgba(0,0,0,0.45)] inline-flex items-center px-5 py-2 rounded-2xl border-[1.42px] border-white/6 bg-white/[0.01] text-white text-sm md:text-lg font-base tracking-wide before:absolute before:inset-x-0 before:top-0 before:h-[70%] before:rounded-t-2xl before:bg-radial-[50%_100%_at_50%_0%] before:from-white/[0.12] before:to-transparent before:content-['']">
+  <span className="relative z-10">Innodyn</span>
+</div>
+              {/* <span 
+               className="w-fit shadow-[0_14px_44px_rgba(0,0,0,0.45)] backdrop-blur-md inline-flex items-center px-5 py-2 rounded-2xl bg-[#1e1e20] border-2 border-white/6 text-white text-sm md:text-lg font-base tracking-wide bg-[radial-gradient(ellipse_at_top,rgba(90,90,96,0.9)_0%,rgba(28,28,32,1)_100%)]"
+               
+              >
                 Innodyn
-              </span>
+              </span> */}
 
               {/* Heading */}
               <div>
@@ -46,7 +53,7 @@ export default function NextGeneration() {
               </div>
 
               {/* Body */}
-              <p className="text-base sm:text-lg font-normal text-zinc-400 leading-[1.8]">
+              <p className="text-base sm:text-lg font-normal text-neutral-400 leading-[1.8]">
                 Innodyn represents a more modern expression of quality,
                 discipline, and scientific presentation. We are building a
                 platform for informed customers who want more than a storefront.
